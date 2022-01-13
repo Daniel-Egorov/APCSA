@@ -1,17 +1,30 @@
-//(c) A+ Computer Science
-//www.apluscompsci.com
+// (c) A+ Computer Science
+// www.apluscompsci.com
 
-//Name -
-//Date -
-//Class -
-//Lab  -
+// Name - Daniel Egorov
+// Date - 13 Jan 2022
+// Class - APCSA
+// Lab  - Unit 0
 
 public class AsciiBox
 {
 	public static void main(String[] args)
 	{
-		System.out.println("name \t  date \n\n" );
+		System.out.println("Daniel \t  13 Jan 2022 \n\n" );
 		System.out.println("+++++++++++++++++++++++++ " );
+		System.out.println("+                       +");
+		System.out.println("+                       +");
+		System.out.println("+                       +");
+		System.out.println("+                       +");
+		System.out.println("+                       +");
+		System.out.println("+                       +");
+		System.out.println("+                       +");
+		System.out.println("+                       +");
+		System.out.println("+                       +");
+		System.out.println("+                       +");
+		System.out.println("+                       +");
+		System.out.println("+++++++++++++++++++++++++");
+		
 
 	}
 }
