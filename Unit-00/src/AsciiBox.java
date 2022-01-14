@@ -4,7 +4,7 @@
 // Name - Daniel Egorov
 // Date - 13 Jan 2022
 // Class - APCSA
-// Lab  - Unit 0
+// Lab  - Unit 0a1
 
 public class AsciiBox
 {

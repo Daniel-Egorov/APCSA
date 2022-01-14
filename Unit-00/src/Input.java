@@ -4,7 +4,7 @@
 //Name - Daniel Egorov
 //Date - 14 Jan 2022
 //Class - APCSA
-//Lab  - Unit 0
+//Lab  - Unit 0c1
 
 import static java.lang.System.*;
 import java.util.Scanner;
