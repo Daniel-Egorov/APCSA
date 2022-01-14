@@ -12,17 +12,17 @@ public class AsciiBox
 	{
 		System.out.println("Daniel \t  13 Jan 2022 \n\n" );
 		System.out.println("+++++++++++++++++++++++++ " );
-		System.out.println("+                       +");
-		System.out.println("+                       +");
-		System.out.println("+                       +");
-		System.out.println("+                       +");
-		System.out.println("+                       +");
-		System.out.println("+                       +");
-		System.out.println("+                       +");
-		System.out.println("+                       +");
-		System.out.println("+                       +");
-		System.out.println("+                       +");
-		System.out.println("+                       +");
+		System.out.println("+ +++++++++++++++++++++ +");
+		System.out.println("+ + +++++++++++++++++ + +");
+		System.out.println("+ + +               + + +");
+		System.out.println("+ + +               + + +");
+		System.out.println("+ + +               + + +");
+		System.out.println("+ + +               + + +");
+		System.out.println("+ + +               + + +");
+		System.out.println("+ + +               + + +");
+		System.out.println("+ + +               + + +");
+		System.out.println("+ + +++++++++++++++++ + +");
+		System.out.println("+ +++++++++++++++++++++ +");
 		System.out.println("+++++++++++++++++++++++++");
 		
 
