@@ -1,10 +1,10 @@
 //� A+ Computer Science
 //www.apluscompsci.com
 
-//Name -
-//Date -
-//Class -
-//Lab  -
+//Name - Daniel Egorov
+//Date - 14 Jan 2022
+//Class - APCSA
+//Lab  - Unit 1
 
 import static java.lang.System.*;
 
