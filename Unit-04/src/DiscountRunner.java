@@ -1,10 +1,10 @@
 //(c) A+ Computer Science
 //www.apluscompsci.com
 
-//Name - 
-//Date -
-//Class -
-//Lab  -
+//Name - Daniel Egorov
+//Date - 18 Jan 2022
+//Class - APCSA
+//Lab  - Unit 4 Discount
 
 import static java.lang.System.*;
 import java.util.Scanner;
