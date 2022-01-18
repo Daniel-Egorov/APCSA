@@ -28,3 +28,11 @@ This repository contains all the code I produced during my AP Computer Science A
 - [DistanceRunner](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-03/src/DistanceRunner.java)
 - [MilesPerHour](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-03/src/MilesPerHour.java)
 - [MPHRunner](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-03/src/MPHRunner.java)
+
+## Unit 4
+- [AddSubMult](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-04/src/AddSubMult.java)
+- [AddSubMultRunner](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-04/src/AddSubMultRunner.java)
+- [Discount](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-04/src/Discount.java)
+- [DiscountRunner](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-04/src/DiscountRunner.java)
+- [NumberVerify](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-04/src/NumberVerify.java)
+- [NumberVerifyRunner](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-04/src/NumberVerifyRunner.java)
