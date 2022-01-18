@@ -1,10 +1,10 @@
 //(c) A+ Computer Science
 //www.apluscompsci.com
 
-//Name -
-//Date -
-//Class -
-//Lab  -
+//Name - Daniel Egorov
+//Date - 18 Jan 2022
+//Class - APCSA
+//Lab  - Unit 3 MPH
 
 import java.util.Scanner; 
 import static java.lang.System.*;
@@ -24,13 +24,22 @@ public class MPHRunner
 
 		out.print("Enter the minutes :: ");
 		int mins = keyboard.nextInt();
-
+		
 		MilesPerHour test = new MilesPerHour(dist, hrs, mins);
 		test.calcMPH();
-		test.print();
+		System.out.println(test.toString());
 		
-		//add more test cases
+		System.out.println("\nOther Test Cases:");
+		test = new MilesPerHour(197, 2, 20);
+		test.calcMPH();
+		System.out.println(test.toString());
 		
+		test = new MilesPerHour(365, 3, 47);
+		test.calcMPH();
+		System.out.println(test.toString());
 		
+		test = new MilesPerHour(23, 17, 30);
+		test.calcMPH();
+		System.out.println(test.toString());
 	}
 }

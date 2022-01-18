@@ -1,10 +1,10 @@
 //(c) A+ Computer Science
 //www.apluscompsci.com
 
-//Name -
-//Date -
-//Class -
-//Lab  -
+//Name - Daniel Egorov
+//Date - 18 Jan 2022
+//Class - APCSA
+//Lab  - Unit 3 MPH
 
 import java.util.Scanner; 
 import static java.lang.System.*;
@@ -21,16 +21,20 @@ public class MilesPerHour
 		mph=0.0;
 	}
 
-	public MilesPerHour(int dist, int hrs, int mins)
-	{
+	public MilesPerHour(int dist, int hrs, int mins) {
+		setNums(dist, hrs, mins);
 	}
 
-	public void setNums(int dist, int hrs, int mins)
-	{
+	public void setNums(int dist, int hrs, int mins) {
+		distance = dist;
+		hours = hrs;
+		minutes = mins;
 	}
 
-	public void calcMPH()
-	{
+	public void calcMPH() {
+		int mins = (hours * 60) + minutes;
+		double mpm = (double)distance / (double)mins;
+		mph = mpm * 60;
 	}
 
 	public void print()
@@ -38,9 +42,7 @@ public class MilesPerHour
 	}
 	
 	//create a print or toString or both
-	
-	public String toString()
-	{
-		return "";
+	public String toString() {
+		return String.format("%d miles in %d hours and %d minutes = %.3f MPH", distance, hours, minutes, mph);
 	}
 }
