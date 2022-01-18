@@ -22,3 +22,9 @@ This repository contains all the code I produced during my AP Computer Science A
 - [LineRunner](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-02/src/LineRunner.java)
 - [Trap](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-02/src/Trap.java)
 - [TrapRunner](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-02/src/TrapRunner.java)
+
+## Unit 3
+- [Distance](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-03/src/Distance.java)
+- [DistanceRunner](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-03/src/DistanceRunner.java)
+- [MilesPerHour](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-03/src/MilesPerHour.java)
+- [MPHRunner](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-03/src/MPHRunner.java)
