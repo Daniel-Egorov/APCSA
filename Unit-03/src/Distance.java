@@ -1,10 +1,10 @@
 //(c) A+ Computer Science 
 //www.apluscompsci.com
 
-//Name -
-//Date -
-//Class -
-//Lab  -
+//Name - Daniel Egorov
+//Date - 18 Jan 2022
+//Class - APCSA
+//Lab  - Unit 3 Distance
 
 import java.util.Scanner; 
 import static java.lang.System.*;
@@ -17,23 +17,34 @@ public class Distance
 
 	public Distance()
 	{
+		setCoordinates(0, 0, 0, 0);
+		calcDistance();
 	}
 
 	public Distance(int x1, int y1, int x2, int y2)
 	{
+		setCoordinates(x1, y1, x2, y2);
+		calcDistance();
 	}
 
 	public void setCoordinates(int x1, int y1, int x2, int y2)
 	{
+		xOne = x1;
+		yOne = y1;
+		xTwo = x2;
+		yTwo = y2;
 	}
 
 	public void calcDistance()
 	{
+		double xPow = Math.pow(xTwo - xOne, 2);
+		double yPow = Math.pow(yTwo - yOne, 2);
+		distance = Math.sqrt(xPow + yPow);
 	}
 	
 	public double getDistance()
 	{
-		return 0.0;
+		return distance;
 	}
 	
 	public void print()
@@ -44,6 +55,6 @@ public class Distance
 
 	public String toString()
 	{
-		return "";
+		return String.format("distance == %.3f", distance);
 	}
 }
