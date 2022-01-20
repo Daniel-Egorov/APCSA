@@ -1,7 +1,7 @@
 //(c) A+ Computer Science
 //www.apluscompsci.com
-//Name -
-//Date -
+//Name - Daniel Egorov
+//Date - 19 Jan 2022
 
 public class AvgLenRunner
 {
