@@ -30,15 +30,15 @@ public class MPHRunner
 		System.out.println(test.toString());
 		
 		System.out.println("\nOther Test Cases:");
-		test = new MilesPerHour(197, 2, 20);
+		test.setNums(197, 2, 20);
 		test.calcMPH();
 		System.out.println(test.toString());
 		
-		test = new MilesPerHour(365, 3, 47);
+		test.setNums(365, 3, 47);
 		test.calcMPH();
 		System.out.println(test.toString());
 		
-		test = new MilesPerHour(23, 17, 30);
+		test.setNums(23, 17, 30);
 		test.calcMPH();
 		System.out.println(test.toString());
 	}
