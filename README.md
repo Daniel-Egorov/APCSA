@@ -36,3 +36,15 @@ This repository contains all the code I produced during my AP Computer Science A
 - [DiscountRunner](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-04/src/DiscountRunner.java)
 - [NumberVerify](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-04/src/NumberVerify.java)
 - [NumberVerifyRunner](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-04/src/NumberVerifyRunner.java)
+
+## Unit 5
+- [AvgLen](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-05/src/AvgLen.java)
+- [AvgLenRunner](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-05/src/AvgLenRunner.java)
+- [FirstLastVowel](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-05/src/FirstLastVowel.java)
+- [VowelsRunner](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-05/src/VowelsRunner.java)
+- [StringEquality](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-05/src/StringEquality.java)
+- [StringEqualityRunner](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-05/src/StringEqualityRunner.java)
+- [StringOddOrEven](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-05/src/StringOddOrEven.java)
+- [StringRunner](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-05/src/StringRunner.java)
+- [WordsCompare](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-05/src/WordsCompare.java)
+- [WordsCompareRunner](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-05/src/WordsCompareRunner.java)
