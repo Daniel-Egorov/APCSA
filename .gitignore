@@ -2,10 +2,3 @@
 .vscode
 .DS_Store
 .settings/
-Unit-05/src/Celebrity.java
-Unit-05/src/CelebrityFrame.java
-Unit-05/src/CelebrityGame.java
-Unit-05/src/CelebrityPanel.java
-Unit-05/src/CelebrityRunner.java
-Unit-05/src/SimpleGUIRunner.java
-Unit-05/src/StartPanel.java
