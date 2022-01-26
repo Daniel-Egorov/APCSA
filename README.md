@@ -48,3 +48,15 @@ This repository contains all the code I produced during my AP Computer Science A
 - [StringRunner](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-05/src/StringRunner.java)
 - [WordsCompare](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-05/src/WordsCompare.java)
 - [WordsCompareRunner](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-05/src/WordsCompareRunner.java)
+
+## Unit 6
+- [CountPairs](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-06/src/CountPairs.java)
+- [CountPairsRunner](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-06/src/CountPairsRunner.java)
+- [LetterRemover](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-06/src/LetterRemover.java)
+- [LetterRemoverRunner](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-06/src/LetterRemoverRunner.java)
+- [Perfect](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-06/src/Perfect.java)
+- [PerfectRunner](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-06/src/PerfectRunner.java)
+- [TriangleOne](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-06/src/TriangleOne.java)
+- [TriangleOneRunner](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-06/src/TriangleOneRunner.java)
+- [Word](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-06/src/Word.java)
+- [WordRunner](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-06/src/WordRunner.java)
