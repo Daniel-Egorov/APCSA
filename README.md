@@ -60,3 +60,21 @@ This repository contains all the code I produced during my AP Computer Science A
 - [TriangleOneRunner](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-06/src/TriangleOneRunner.java)
 - [Word](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-06/src/Word.java)
 - [WordRunner](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-06/src/WordRunner.java)
+
+## Unit 7
+- [BiggestDouble](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-07/src/BiggestDouble.java)
+- [DoubleRunner](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-07/src/DoubleRunner.java)
+- [RockPaperScissors](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-07/src/RockPaperScissors.java)
+- [RPSRunner](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-07/src/RPSRunner.java)
+- [TriangleFive](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-07/src/TriangleFive.java)
+- [TriangleFiveRunner](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-07/src/TriangleFiveRunner.java)
+- [Triples](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-07/src/Triples.java)
+- [TriplesRunner](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-07/src/TriplesRunner.java)
+
+## Unit 8
+- [RaySumLast](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-08/src/RaySumLast.java)
+- [SumLastRunner](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-08/src/SumLastRunner.java)
+- [RayOddToEven](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-08/src/RayOddToEven.java)
+- [OddToEvenRunner](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-08/src/OddToEvenRunner.java)
+- [RayDown](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-08/src/RayDown.java)
+- [DownRunner](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-08/src/DownRunner.java)
