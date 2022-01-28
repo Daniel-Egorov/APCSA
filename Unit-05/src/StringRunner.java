@@ -7,21 +7,21 @@
 //Lab  - Unit 5 StringOddOrEven
 
 import static java.lang.System.*;
+
 import java.util.Scanner;
 
-public class StringRunner
-{
-	public static void main ( String[] args ) {
-		String word;
-		Scanner keyboard = new Scanner(System.in);
-		StringOddOrEven str = new StringOddOrEven();
-		
-		for (int i = 0; i < 5; i++) { // run 5 times
-			System.out.print("Enter a word :: ");
-			word = keyboard.next();
-			str.setString(word);
-			System.out.println(str);
-		}
-		
-	}
+public class StringRunner {
+
+  public static void main(String[] args) {
+    String word;
+    Scanner keyboard = new Scanner(System.in);
+    StringOddOrEven str = new StringOddOrEven();
+
+    for (int i = 0; i < 5; i++) { // run 5 times
+      System.out.print("Enter a word :: ");
+      word = keyboard.next();
+      str.setString(word);
+      System.out.println(str);
+    }
+  }
 }

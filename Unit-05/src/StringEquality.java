@@ -8,30 +8,28 @@
 
 import static java.lang.System.*;
 
-public class StringEquality
-{
-	private String wordOne, wordTwo;
+public class StringEquality {
 
-	public StringEquality() {
-	}
+  private String wordOne, wordTwo;
 
-	public StringEquality(String one, String two) {
-		this.setWords(one, two);
-	}
+  public StringEquality() {}
 
-	public void setWords(String one, String two) {
-		this.wordOne = one;
-		this.wordTwo = two;
-	}
+  public StringEquality(String one, String two) {
+    this.setWords(one, two);
+  }
 
-	public boolean checkEquality() {
-		return this.wordOne.equals(this.wordTwo);
-	}
+  public void setWords(String one, String two) {
+    this.wordOne = one;
+    this.wordTwo = two;
+  }
 
-	public String toString() {
-		if (!this.checkEquality())
-			return wordOne + " does not have the same letters as " + wordTwo + "\n";
-		else 
-			return wordOne + " has the same letters as " + wordTwo + "\n";
-	}
+  public boolean checkEquality() {
+    return this.wordOne.equals(this.wordTwo);
+  }
+
+  public String toString() {
+    if (!this.checkEquality()) return (
+      wordOne + " does not have the same letters as " + wordTwo + "\n"
+    ); else return wordOne + " has the same letters as " + wordTwo + "\n";
+  }
 }

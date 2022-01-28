@@ -5,8 +5,9 @@
 import static java.lang.System.*;
 
 public class WordRunner {
-	public static void main ( String[] args ) {
-		//add test cases
+
+  public static void main(String[] args) {
+    //add test cases
     Word backWord = new Word();
 
     backWord.setString("Hello");
@@ -46,5 +47,5 @@ public class WordRunner {
     System.out.println(backWord.getLastChar());
     System.out.println(backWord.getBackWards());
     System.out.println(backWord);
-	}
+  }
 }

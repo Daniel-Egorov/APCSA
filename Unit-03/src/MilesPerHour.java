@@ -6,43 +6,47 @@
 //Class - APCSA
 //Lab  - Unit 3 MPH
 
-import java.util.Scanner; 
-import static java.lang.System.*;
 import static java.lang.Math.*;
+import static java.lang.System.*;
 
-public class MilesPerHour
-{
-	private int distance, hours, minutes;
-	private double mph;
+import java.util.Scanner;
 
-	public MilesPerHour()
-	{
-		setNums(0,0,0);
-		mph=0.0;
-	}
+public class MilesPerHour {
 
-	public MilesPerHour(int dist, int hrs, int mins) {
-		setNums(dist, hrs, mins);
-	}
+  private int distance, hours, minutes;
+  private double mph;
 
-	public void setNums(int dist, int hrs, int mins) {
-		distance = dist;
-		hours = hrs;
-		minutes = mins;
-	}
+  public MilesPerHour() {
+    setNums(0, 0, 0);
+    mph = 0.0;
+  }
 
-	public void calcMPH() {
-		int mins = (hours * 60) + minutes;
-		double mpm = (double)distance / (double)mins;
-		mph = mpm * 60;
-	}
+  public MilesPerHour(int dist, int hrs, int mins) {
+    setNums(dist, hrs, mins);
+  }
 
-	public void print()
-	{
-	}
-	
-	//create a print or toString or both
-	public String toString() {
-		return String.format("%d miles in %d hours and %d minutes = %.3f MPH", distance, hours, minutes, mph);
-	}
+  public void setNums(int dist, int hrs, int mins) {
+    distance = dist;
+    hours = hrs;
+    minutes = mins;
+  }
+
+  public void calcMPH() {
+    int mins = (hours * 60) + minutes;
+    double mpm = (double) distance / (double) mins;
+    mph = mpm * 60;
+  }
+
+  public void print() {}
+
+  //create a print or toString or both
+  public String toString() {
+    return String.format(
+      "%d miles in %d hours and %d minutes = %.3f MPH",
+      distance,
+      hours,
+      minutes,
+      mph
+    );
+  }
 }

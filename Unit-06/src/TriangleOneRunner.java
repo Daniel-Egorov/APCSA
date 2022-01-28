@@ -5,8 +5,9 @@
 import static java.lang.System.*;
 
 public class TriangleOneRunner {
-	public static void main ( String[] args ) {
-		//add test cases
+
+  public static void main(String[] args) {
+    //add test cases
     TriangleOne triangle = new TriangleOne();
 
     triangle.setWord("hippo");
@@ -23,5 +24,5 @@ public class TriangleOneRunner {
 
     triangle.setWord("chicken");
     triangle.print();
-	}
+  }
 }

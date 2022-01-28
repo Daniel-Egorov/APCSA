@@ -9,32 +9,33 @@
 import static java.lang.System.*;
 
 public class StringEqualityRunner {
-	public static void main( String args[] ) {
-		//add test cases
-		StringEquality comparator = new StringEquality();
-		
-		comparator.setWords("hello", "goodbye");
-		System.out.println(comparator);
-		
-		comparator.setWords("one", "two");
-		System.out.println(comparator);
-		
-		comparator.setWords("three", "four");
-		System.out.println(comparator);
-		
-		comparator.setWords("TCEA", "UIL");
-		System.out.println(comparator);
-		
-		comparator.setWords("State", "Champions");
-		System.out.println(comparator);
-		
-		comparator.setWords("ABC", "ABC");
-		System.out.println(comparator);
-		
-		comparator.setWords("ABC", "CBA");
-		System.out.println(comparator);
-		
-		comparator.setWords("Same", "Same");
-		System.out.println(comparator);
-	}
+
+  public static void main(String args[]) {
+    //add test cases
+    StringEquality comparator = new StringEquality();
+
+    comparator.setWords("hello", "goodbye");
+    System.out.println(comparator);
+
+    comparator.setWords("one", "two");
+    System.out.println(comparator);
+
+    comparator.setWords("three", "four");
+    System.out.println(comparator);
+
+    comparator.setWords("TCEA", "UIL");
+    System.out.println(comparator);
+
+    comparator.setWords("State", "Champions");
+    System.out.println(comparator);
+
+    comparator.setWords("ABC", "ABC");
+    System.out.println(comparator);
+
+    comparator.setWords("ABC", "CBA");
+    System.out.println(comparator);
+
+    comparator.setWords("Same", "Same");
+    System.out.println(comparator);
+  }
 }

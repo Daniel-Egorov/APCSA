@@ -8,12 +8,13 @@
 
 import static java.lang.System.*;
 
-public class NumberVerify
-{
-	public static boolean isOdd(int n) {
-		return n % 2 == 1;
-	}
-	public static boolean isEven(int n) {
-		return n % 2 == 0;
-	}	
+public class NumberVerify {
+
+  public static boolean isOdd(int n) {
+    return n % 2 == 1;
+  }
+
+  public static boolean isEven(int n) {
+    return n % 2 == 0;
+  }
 }

@@ -2,14 +2,13 @@
 //www.apluscompsci.com
 //Name Daniel Egorov
 
-import static java.lang.System.*; 
+import static java.lang.System.*;
 
-public class CountPairsRunner
-{
-	public static void main( String[] args )
-	{
-		System.out.println( CountPairs.pairCounter("test_cases") );
-		//add in all of the provided test cases from the lab handout	
+public class CountPairsRunner {
+
+  public static void main(String[] args) {
+    System.out.println(CountPairs.pairCounter("test_cases"));
+    //add in all of the provided test cases from the lab handout
     System.out.println(CountPairs.pairCounter("ddogccatppig"));
     System.out.println(CountPairs.pairCounter("dogcatpig"));
     System.out.println(CountPairs.pairCounter("xxyyzz"));
@@ -21,5 +20,5 @@ public class CountPairsRunner
     System.out.println(CountPairs.pairCounter("dogabbcccatpig"));
     System.out.println(CountPairs.pairCounter("aaaa"));
     System.out.println(CountPairs.pairCounter("AAAAAAAAA"));
-	}
+  }
 }

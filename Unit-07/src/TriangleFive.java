@@ -3,28 +3,29 @@
 //Name - Daniel Egorov
 
 public class TriangleFive {
-   private char letter;
-   private int amount;
 
-	public TriangleFive() {
+  private char letter;
+  private int amount;
+
+  public TriangleFive() {
     this.setAmount(0);
   }
 
-	public TriangleFive(char c, int amt) {
+  public TriangleFive(char c, int amt) {
     this.setLetter(c);
     this.setAmount(amt);
-	}
+  }
 
-	public void setLetter(char c) {
+  public void setLetter(char c) {
     this.letter = c;
-	}
+  }
 
-	public void setAmount(int amt) {
+  public void setAmount(int amt) {
     this.amount = amt;
-	}
+  }
 
-	public String toString() {
-		String output = "";
+  public String toString() {
+    String output = "";
     char c = this.letter; // copy of {this.letter}
     int l = 0; // keep track of how many times not to place a letter
     for (int k = 0; k < this.amount; k++) { // for every row
@@ -48,6 +49,6 @@ public class TriangleFive {
       output += "\n";
       l = 0; // must reset {l} to 0 because each new row starts with {this.amount} of {this.letter}
     }
-		return output;
-	}
+    return output;
+  }
 }

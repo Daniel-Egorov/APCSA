@@ -5,6 +5,7 @@
 import static java.lang.System.*;
 
 public class Perfect {
+
   private int number;
 
   //add constructors
@@ -16,12 +17,12 @@ public class Perfect {
     this.setNum(num);
   }
 
-	//add a set method
+  //add a set method
   public void setNum(int num) {
     this.number = num;
   }
-  
-	public boolean isPerfect() {
+
+  public boolean isPerfect() {
     /*
     MAX prevents checking more numbers than necessary,
     originally it would check all numbers up until the
@@ -41,8 +42,8 @@ public class Perfect {
     calculated, therefore speeding up the calculation and 
     especially so for really large numbers
     */
-    int MAX = (int)Math.floor(Math.sqrt(this.number));
-    int divisorSum = 1; // to store the sum of every divisor 
+    int MAX = (int) Math.floor(Math.sqrt(this.number));
+    int divisorSum = 1; // to store the sum of every divisor
 
     int i = 2;
     while (i <= MAX) {
@@ -52,15 +53,13 @@ public class Perfect {
       }
       i++;
     }
-		return divisorSum == this.number;
-	}
-
-	//add a toString	
-  public String toString() {
-    if (this.isPerfect())
-      return this.number + " is perfect.";
-    else  
-      return this.number + " is not perfect.";
+    return divisorSum == this.number;
   }
-	
+
+  //add a toString
+  public String toString() {
+    if (this.isPerfect()) return this.number + " is perfect."; else return (
+      this.number + " is not perfect."
+    );
+  }
 }

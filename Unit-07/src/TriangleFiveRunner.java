@@ -3,6 +3,7 @@
 //Name - Daniel Egorov
 
 public class TriangleFiveRunner {
+
   public static void main(String args[]) {
     TriangleFive runner = new TriangleFive();
     runner.setAmount(4);
@@ -24,5 +25,5 @@ public class TriangleFiveRunner {
     runner.setAmount(8);
     runner.setLetter('Z');
     System.out.println(runner);
-	}
+  }
 }

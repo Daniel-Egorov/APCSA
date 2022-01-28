@@ -4,10 +4,11 @@
 //Date - 27 Jan 2022
 
 public class RayOddToEven {
-	public static int go(int[] ray) {
+
+  public static int go(int[] ray) {
     int oddIndex = -1;
     int evenIndex = -1;
-    
+
     for (int i = 0; i < ray.length; i++) {
       // if an even number is found but an odd number hasn't yet been, skip
       if (ray[i] % 2 == 0 && oddIndex == -1) continue;
@@ -24,6 +25,6 @@ public class RayOddToEven {
     // if either an odd or even number hasn't been found, return -1
     if (oddIndex == -1 || evenIndex == -1) return -1;
     // return the distance between the indices
-		return evenIndex - oddIndex;
-	}
+    return evenIndex - oddIndex;
+  }
 }

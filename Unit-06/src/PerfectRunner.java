@@ -2,16 +2,17 @@
 //www.apluscompsci.com
 //Name - Daniel Egorov
 
-import static java.lang.System.*; 
+import static java.lang.System.*;
 
 public class PerfectRunner {
-	public static void main( String args[] ) {
-		//add test cases
+
+  public static void main(String args[]) {
+    //add test cases
     Perfect perf = new Perfect();
 
     perf.setNum(496);
     System.out.println(perf);
-    
+
     perf.setNum(45);
     System.out.println(perf);
 
@@ -38,5 +39,5 @@ public class PerfectRunner {
 
     perf.setNum(33550336);
     System.out.println(perf);
-	}
+  }
 }

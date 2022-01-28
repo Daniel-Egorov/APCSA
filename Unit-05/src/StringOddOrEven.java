@@ -7,33 +7,32 @@
 //Lab  - Unit 5 StringOddOrEven
 
 import static java.lang.System.*;
+
 import java.util.Scanner;
 
-public class StringOddOrEven
-{
-	private String word;
+public class StringOddOrEven {
 
-	public StringOddOrEven() {
-	}
+  private String word;
 
-	public StringOddOrEven(String s) {
-		this.word = s;
-	}
+  public StringOddOrEven() {}
 
-	public void setString(String s) {
-		this.word = s;
-	}
+  public StringOddOrEven(String s) {
+    this.word = s;
+  }
 
- 	public boolean isEven() {
- 		return this.word.length() % 2 == 0;
-	}
+  public void setString(String s) {
+    this.word = s;
+  }
 
- 	public String toString() {
- 		String result;
- 		if (this.isEven()) result = "even";
- 		else result = "odd";
- 		
- 		String output = this.word + " is " + result;
- 		return output;
-	}
+  public boolean isEven() {
+    return this.word.length() % 2 == 0;
+  }
+
+  public String toString() {
+    String result;
+    if (this.isEven()) result = "even"; else result = "odd";
+
+    String output = this.word + " is " + result;
+    return output;
+  }
 }

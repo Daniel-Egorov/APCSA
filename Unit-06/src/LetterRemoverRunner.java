@@ -5,8 +5,9 @@
 import static java.lang.System.*;
 
 public class LetterRemoverRunner {
-	public static void main( String args[] ) {
-		//add test cases
+
+  public static void main(String args[]) {
+    //add test cases
     LetterRemover remover = new LetterRemover();
 
     remover.setRemover("I am Sam I am", 'a');
@@ -31,10 +32,10 @@ public class LetterRemoverRunner {
     System.out.println(remover);
     System.out.println(remover.removeLetters());
 
-    System.out.println();    
+    System.out.println();
 
     remover.setRemover("abaababababa", 'x');
     System.out.println(remover);
     System.out.println(remover.removeLetters());
-	}
+  }
 }
