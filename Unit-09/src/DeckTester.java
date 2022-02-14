@@ -49,7 +49,7 @@ public class DeckTester {
     };
 
     Deck deck = new Deck(ranks, suits, values);
-    deck.efficientShuffle();
+    deck.shuffle();
     deck.deal();
     deck.deal();
     System.out.println(deck.toString());

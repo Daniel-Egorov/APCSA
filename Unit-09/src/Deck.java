@@ -65,39 +65,7 @@ public class Deck {
 	 * Randomly permute the given collection of cards
 	 * and reset the size to represent the entire deck.
 	 */
-	public void perfectShuffle() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 4 *** */
-    Card[] shuffled = new Card[52];
-    int k = 0;
-    for (int j = 0; j < 26; j++) {
-      shuffled[k] = this.cards[j];
-      k += 2;
-    }
-
-    k = 1;
-    for (int j = 26; j < 52; j++) {
-      shuffled[k] = this.cards[j];
-      k += 2;
-    }
-    this.cards = shuffled;
-    this.size = 52;
-	}
-
-  public void selectionShuffle() {
-    Card[] shuffled = new Card[52];
-    for (int k = 0; k < 52; k++) {
-      int rand;
-      do {
-        rand = (int) Math.floor(Math.random() * 52);
-      } while (this.cards[rand] == null);
-      shuffled[k] = this.cards[rand];
-      this.cards[rand] = null;
-    }
-    this.cards = shuffled;
-    this.size = 52;
-  }
-
-  public void efficientShuffle() {
+  public void shuffle() {
     for (int k = 51; k > 0; k--) {
       int rand = (int) Math.floor(Math.random() * (k + 1));
       Card temp = this.cards[rand];
