@@ -3,7 +3,6 @@
 //Name - Daniel Egorov
 //Date - 16 Feb 2022
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ListOddToEven
