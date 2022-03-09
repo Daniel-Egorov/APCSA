@@ -2,23 +2,24 @@
 //www.apluscompsci.com
 //Name - Daniel Egorov
 
-import java.io.File; 
+import static java.lang.System.*;
+
+import java.io.File;
 import java.io.IOException;
-import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
 
-import static java.lang.System.*;
+public class WordRunner {
 
-public class WordRunner
-{
-	public static void main( String args[] ) throws IOException
-	{
-		Scanner file = new Scanner(new File("/Users/eggnog/Developer/APCSA/Unit-12/src/words.dat"));
+  public static void main(String args[]) throws IOException {
+    Scanner file = new Scanner(
+      new File("/Users/eggnog/Developer/APCSA/Unit-12/src/words.dat")
+    );
 
-		int size = file.nextInt();
-		file.nextLine();
+    int size = file.nextInt();
+    file.nextLine();
 
     List<Word> sorted = new ArrayList<Word>();
 
@@ -39,8 +40,8 @@ public class WordRunner
       }
     }
 
-		for (int i = 0; i < sorted.size(); i++) {
+    for (int i = 0; i < sorted.size(); i++) {
       System.out.println(sorted.get(i));
     }
-	}
+  }
 }

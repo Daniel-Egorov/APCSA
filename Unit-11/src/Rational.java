@@ -19,6 +19,7 @@ class Rational implements Comparable<Rational> {
     this.setRational(numerator, denominator);
     this.reduce();
   }
+
   //write a setRational method
   public void setRational(int num, int den) {
     this.setNumer(num);
@@ -39,7 +40,15 @@ class Rational implements Comparable<Rational> {
     //num1/den1 + num2/den2
     //new numerator = (num1 * den2 + num2 * den1)
     //new denominator = (den1 * den2)
-    this.setRational((this.numerator * other.getDenom() + other.getNumer() * this.denominator), (this.denominator * other.getDenom()));
+    this.setRational(
+        (
+          this.numerator *
+          other.getDenom() +
+          other.getNumer() *
+          this.denominator
+        ),
+        (this.denominator * other.getDenom())
+      );
     this.reduce();
   }
 
@@ -49,13 +58,12 @@ class Rational implements Comparable<Rational> {
       // cant call this.setRational() because it will result in an infinite loop
       this.setNumer(this.numerator / gcd);
       this.setDenom(this.denominator / gcd);
-    } 
+    }
   }
 
   private int gcd(int numOne, int numTwo) {
     int small;
-    if (numOne > numTwo) small = numTwo;
-    else small = numOne;
+    if (numOne > numTwo) small = numTwo; else small = numOne;
     /*
     start the divisor at the smallest of the two numbers
     then keep dividing both numbers by the divisor and 
@@ -81,7 +89,7 @@ class Rational implements Comparable<Rational> {
   public int getDenom() {
     return this.denominator;
   }
-  
+
   public boolean equals(Object obj) {
     if (obj == this) return true;
     if (obj.getClass() != this.getClass()) return false;
@@ -90,12 +98,13 @@ class Rational implements Comparable<Rational> {
   }
 
   public int compareTo(Rational other) {
-    double otherDiv = (double)other.getNumer() / other.getDenom();
-    double thisDiv = (double)this.numerator / this.denominator;
-    if (thisDiv > otherDiv) return 1;
-    else if (thisDiv < otherDiv) return -1;
-    else return 0;
+    double otherDiv = (double) other.getNumer() / other.getDenom();
+    double thisDiv = (double) this.numerator / this.denominator;
+    if (thisDiv > otherDiv) return 1; else if (
+      thisDiv < otherDiv
+    ) return -1; else return 0;
   }
+
   //write  toString() method
   public String toString() {
     return this.numerator + "/" + this.denominator;

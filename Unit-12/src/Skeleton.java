@@ -2,24 +2,24 @@
 //www.apluscompsci.com
 //Name - Daniel Egorov
 
-import static java.lang.System.*; 
+import static java.lang.System.*;
 
-public class Skeleton implements Monster
-{
+public class Skeleton implements Monster {
 
-	//add instance variables	
+  //add instance variables
   private String name;
   private int size;
-	//add a constructor
+
+  //add a constructor
   public Skeleton() {
     this.setNameAndSize("Skeleton", 1);
   }
-  
+
   public Skeleton(String name, int size) {
     this.setNameAndSize(name, size);
   }
 
-	//add code to implement the Monster interface
+  //add code to implement the Monster interface
   public int getHowBig() {
     return this.size;
   }
@@ -52,8 +52,8 @@ public class Skeleton implements Monster
     this.setName(name);
     this.setSize(size);
   }
-  
-	//add a toString
+
+  //add a toString
   public String toString() {
     return this.name + " " + this.size;
   }

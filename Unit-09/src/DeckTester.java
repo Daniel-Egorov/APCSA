@@ -3,18 +3,18 @@
  */
 public class DeckTester {
 
-	/**
-	 * The main method in this class checks the Deck operations for consistency.
-	 *	@param args is not used.
-	 */
-	public static void main(String[] args) {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+  /**
+   * The main method in this class checks the Deck operations for consistency.
+   *	@param args is not used.
+   */
+  public static void main(String[] args) {
+    /* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
     String[] ranks = {
-      "ace", 
-      "king", 
-      "queen", 
-      "jack", 
-      "ten", 
+      "ace",
+      "king",
+      "queen",
+      "jack",
+      "ten",
       "nine",
       "eight",
       "seven",
@@ -22,36 +22,17 @@ public class DeckTester {
       "five",
       "four",
       "three",
-      "two"
+      "two",
     };
 
-    String[] suits = {
-      "spades",
-      "diamonds",
-      "clubs",
-      "hearts"
-    };
+    String[] suits = { "spades", "diamonds", "clubs", "hearts" };
 
-    int[] values = {
-      11,
-      10,
-      10,
-      10,
-      10,
-      9,
-      8,
-      7,
-      6,
-      5,
-      4,
-      3,
-      2
-    };
+    int[] values = { 11, 10, 10, 10, 10, 9, 8, 7, 6, 5, 4, 3, 2 };
 
     Deck deck = new Deck(ranks, suits, values);
     deck.shuffle();
     deck.deal();
     deck.deal();
     System.out.println(deck.toString());
-	}
+  }
 }
