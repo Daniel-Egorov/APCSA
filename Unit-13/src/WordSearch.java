@@ -19,14 +19,6 @@ public class WordSearch {
     }
   }
 
-  public static void main(String[] args) {
-    WordSearch ms = new WordSearch(
-      8,
-      "APPLEXYPXLHJKEEDEGGLLXXCGFPDGOGNMYNTAHUUPUQDGBTSBTHIGHMSILKXLTHIS"
-    );
-    System.out.println(ms.checkDown("AXE", 0, 0));
-  }
-
   public boolean isFound(String word) {
     for (int i = 0; i < this.m.length; i++) {
       for (int j = 0; j < this.m[i].length; j++) {
