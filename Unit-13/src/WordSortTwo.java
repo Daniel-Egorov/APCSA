@@ -2,25 +2,21 @@
 //www.apluscompsci.com
 //Name - Daniel Egorov
 
-import java.util.Arrays;
-import java.util.Scanner;
 import static java.lang.System.*;
 
-public class WordSortTwo
-{
-	private String[] wordRay;
+import java.util.Arrays;
+import java.util.Scanner;
 
-	public WordSortTwo(String sentence)
-	{
-	}
+public class WordSortTwo {
 
-	public void sort()
-	{
-	}
+  private String[] wordRay;
 
-	public String toString()
-	{
-		String output="";
-		return output+"\n\n";
-	}
+  public WordSortTwo(String sentence) {}
+
+  public void sort() {}
+
+  public String toString() {
+    String output = "";
+    return output + "\n\n";
+  }
 }

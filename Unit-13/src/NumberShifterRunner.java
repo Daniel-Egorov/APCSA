@@ -2,19 +2,16 @@
 //www.apluscompsci.com
 //Name - Daniel Egorov
 
-import java.util.Arrays;
-import java.util.Scanner;
-import java.io.File;
-import java.io.IOException;
 import static java.lang.System.*;
 
-public class NumberShifterRunner
-{
-	public static void main( String args[] ) throws IOException
-	{
-		//add test cases
-	}
+import java.io.File;
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class NumberShifterRunner {
+
+  public static void main(String args[]) throws IOException {
+    //add test cases
+  }
 }
-
-
-

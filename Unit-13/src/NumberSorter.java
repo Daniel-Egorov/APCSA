@@ -2,25 +2,24 @@
 //www.apluscompsci.com
 //Name - Daniel Egorov
 
-import java.util.Arrays; 
-import java.util.Scanner;
-import java.io.File;
-import java.io.IOException;
 import static java.lang.System.*;
 
-public class NumberSorter
-{
-	//instance variables and other methods not shown
+import java.io.File;
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.Scanner;
 
-	private static int getNumDigits(int number)
-	{
-		int count = 0;
-		return count;
-	}
+public class NumberSorter {
 
-	public static int[] getSortedDigitArray(int number)
-	{
-		int[] sorted = null;
-		return sorted;
-	}
+  //instance variables and other methods not shown
+
+  private static int getNumDigits(int number) {
+    int count = 0;
+    return count;
+  }
+
+  public static int[] getSortedDigitArray(int number) {
+    int[] sorted = null;
+    return sorted;
+  }
 }

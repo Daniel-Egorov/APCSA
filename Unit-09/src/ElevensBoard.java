@@ -142,12 +142,9 @@ public class ElevensBoard extends Board {
     for (int i = 0; i < selectedCards.size(); i++) {
       Integer index = selectedCards.get(i);
       Card card = this.cardAt(index.intValue());
-      if (card.rank().equals("king")) 
-        hasKing = true; 
-      else if (card.rank().equals("queen")) 
-        hasQueen = true; 
-      else if (card.rank().equals("jack")) 
-        hasJack = true;
+      if (card.rank().equals("king")) hasKing = true; else if (
+        card.rank().equals("queen")
+      ) hasQueen = true; else if (card.rank().equals("jack")) hasJack = true;
     }
     return hasJack && hasQueen && hasKing;
   }
