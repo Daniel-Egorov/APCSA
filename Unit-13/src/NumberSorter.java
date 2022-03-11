@@ -16,7 +16,7 @@ public class NumberSorter {
     while (number > 0) {
       count++;
       number /= 10;
-    } 
+    }
     return count;
   }
 
@@ -43,7 +43,7 @@ public class NumberSorter {
       sorted[lowestIndex] = sorted[i];
       sorted[i] = lowest;
     }
-    
+
     return sorted;
   }
 }
