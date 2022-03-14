@@ -1,8 +1,8 @@
 //� A+ Computer Science  -  www.apluscompsci.com
-//Name -
-//Date -
-//Class -
-//Lab  -
+//Name - Daniel Egorov
+//Date - 14 Mar 2022
+//Class - APCSA
+//Lab  - RecursionFunThree
 
 import static java.lang.System.*;
 
@@ -19,6 +19,8 @@ public class RecursionFunThree {
    * the solution to this problem must use recursion
    */
   public static int luckyThrees(long number) {
-    return 0;
+    if (number / 10 == 0) return 0;
+    if (number % 10 == 3) return 1 + luckyThrees(number / 10);
+    return luckyThrees(number / 10);
   }
 }
