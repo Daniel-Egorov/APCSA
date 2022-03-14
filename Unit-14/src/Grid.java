@@ -11,7 +11,7 @@ public class Grid {
     this.grid = new String[rows][cols];
     for (int i = 0; i < rows; i++) {
       for (int j = 0; j < cols; j++) {
-        int rand = (int)(Math.random() * vals.length);
+        int rand = (int) (Math.random() * vals.length);
         this.grid[i][j] = vals[rand];
       }
     }
@@ -20,9 +20,9 @@ public class Grid {
   //find out which of the vals occurs the most
   public String findMax(String[] vals) {
     String highest = vals[0];
-    for (String val : vals) {
-      if (this.countVals(val) > this.countVals(highest)) highest = val;
-    }
+    for (String val : vals) if (
+      this.countVals(val) > this.countVals(highest)
+    ) highest = val;
     return highest + " occurs the most";
   }
 

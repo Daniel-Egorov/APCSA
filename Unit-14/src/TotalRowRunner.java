@@ -10,10 +10,24 @@ public class TotalRowRunner {
     //add code here
     TotalRow runner = new TotalRow();
     System.out.print("Row totals are : ");
-    System.out.println(TotalRow.getRowTotals(new int[][]{{1,2,3},{5,5,5,5}}));
+    System.out.println(
+      TotalRow.getRowTotals(new int[][] { { 1, 2, 3 }, { 5, 5, 5, 5 } })
+    );
     System.out.print("Row totals are : ");
-    System.out.println(TotalRow.getRowTotals(new int[][]{{1,2,3},{5},{1},{2,2}}));
+    System.out.println(
+      TotalRow.getRowTotals(new int[][] { { 1, 2, 3 }, { 5 }, { 1 }, { 2, 2 } })
+    );
     System.out.print("Row totals are : ");
-    System.out.println(TotalRow.getRowTotals(new int[][]{{1,2},{5,5},{5,5},{4,5,6,7},{123124,12312}}));
+    System.out.println(
+      TotalRow.getRowTotals(
+        new int[][] {
+          { 1, 2 },
+          { 5, 5 },
+          { 5, 5 },
+          { 4, 5, 6, 7 },
+          { 123124, 12312 },
+        }
+      )
+    );
   }
 }

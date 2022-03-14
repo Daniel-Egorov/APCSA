@@ -20,7 +20,7 @@ public class MatrixCount1 {
     int count = 0;
     for (int i = 0; i < MatrixCount1.m.length; i++) {
       for (int j = 0; j < MatrixCount1.m[i].length; j++) {
-        if (MatrixCount1.m[i][j] == val) count++; 
+        if (MatrixCount1.m[i][j] == val) count++;
       }
     }
     return count;
