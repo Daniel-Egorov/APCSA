@@ -29,7 +29,7 @@ public class WordSearch {
           this.checkRight(word, i, j) ||
           this.checkDiagDownLeft(word, i, j) ||
           this.checkDiagDownRight(word, i, j) ||
-          this.checkDiagUpLeft(word, i, j) || 
+          this.checkDiagUpLeft(word, i, j) ||
           this.checkDiagUpRight(word, i, j)
         ) return true;
       }
