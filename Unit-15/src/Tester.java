@@ -1,36 +1,34 @@
 //(c) A+ Computer Science
 //www.apluscompsci.com
 //Name -
- 
-import javax.swing.JFrame;
+
 import java.awt.Component;
+import javax.swing.JFrame;
 
-public class Tester extends JFrame
-{
-	private static final int WIDTH = 800;
-	private static final int HEIGHT = 600;
+public class Tester extends JFrame {
 
-	public Tester()
-	{
-		super("PONG TESTER");
-		setSize(WIDTH,HEIGHT);
+  private static final int WIDTH = 800;
+  private static final int HEIGHT = 600;
 
-		getContentPane().add(new BlockTestTwo());
+  public Tester() {
+    super("PONG TESTER");
+    setSize(WIDTH, HEIGHT);
 
-		//uncomment when you are ready to test the Ball
-		//getContentPane().add(new BallTestTwo());
+    getContentPane().add(new BlockTestTwo());
 
-		//PaddleTestTwo padTest = new PaddleTestTwo();
-		//((Component)padTest).setFocusable(true);
-		//getContentPane().add(padTest);
+    //uncomment when you are ready to test the Ball
+    //getContentPane().add(new BallTestTwo());
 
-		setVisible(true);
+    //PaddleTestTwo padTest = new PaddleTestTwo();
+    //((Component)padTest).setFocusable(true);
+    //getContentPane().add(padTest);
 
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	}
+    setVisible(true);
 
-	public static void main( String args[] )
-	{
-		Tester run = new Tester();
-	}
+    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+  }
+
+  public static void main(String args[]) {
+    Tester run = new Tester();
+  }
 }
