@@ -1,6 +1,6 @@
 //(c) A+ Computer Science
 //www.apluscompsci.com
-//Name -
+//Name - Daniel Egorov
 
 import static java.lang.Character.*;
 
@@ -21,10 +21,20 @@ public class Pong extends Canvas implements KeyListener, Runnable {
   private Paddle rightPaddle;
   private boolean[] keys;
   private BufferedImage back;
+  private Wall rightWall;
+  private Wall leftWall;
+  private Wall topWall;
+  private Wall bottomWall;
 
   public Pong() {
     //set up all variables related to the game
-
+    this.ball = new Ball(200, 200, Color.orange);
+    this.leftPaddle = new Paddle(10, 300, 10, 60, Color.blue, 5);
+    this.rightPaddle = new Paddle(780, 300, 10, 60, Color.blue, 5);
+    this.rightWall = new Wall(800, 0, 10, 600);
+    this.leftWall = new Wall(0, 0, 10, 600);
+    this.topWall = new Wall(0, 0, 800, 10);
+    this.bottomWall = new Wall(0, 580, 800, 10);
     keys = new boolean[4];
 
     setBackground(Color.WHITE);
@@ -44,8 +54,7 @@ public class Pong extends Canvas implements KeyListener, Runnable {
 
     //take a snap shop of the current screen and same it as an image
     //that is the exact same width and height as the current screen
-    if (back == null) back =
-      (BufferedImage) (createImage(getWidth(), getHeight()));
+    if (back == null) back = (BufferedImage) (createImage(getWidth(), getHeight()));
 
     //create a graphics reference to the back ground image
     //we will draw all changes on the background image
@@ -56,18 +65,32 @@ public class Pong extends Canvas implements KeyListener, Runnable {
     rightPaddle.draw(graphToBack);
 
     //see if ball hits left wall or right wall
-    if (!(ball.getX() >= 10 && ball.getX() <= 780)) {
+    if (ball.didCollideLeft(this.leftWall) || ball.didCollideRight(this.rightWall)) {
       ball.setXSpeed(0);
       ball.setYSpeed(0);
     }
 
     //see if the ball hits the top or bottom wall
+    if (ball.didCollideTop(this.topWall) || ball.didCollideBottom(this.bottomWall)) {
+      ball.setYSpeed(-ball.getYSpeed());
+    }
 
     //see if the ball hits the left paddle
-
+    if (ball.didCollideLeft(leftPaddle)) {
+      System.out.println("Hit left paddle");
+      ball.setXSpeed(-ball.getXSpeed());
+    }
     //see if the ball hits the right paddle
+    if (ball.didCollideRight(rightPaddle)) {
+      System.out.println("Hit right paddle");
+      ball.setXSpeed(-ball.getXSpeed());
+    }
 
     //see if the paddles need to be moved
+    if (keys[0] == true) leftPaddle.moveUpAndDraw(graphToBack);
+    if (keys[1] == true) leftPaddle.moveDownAndDraw(graphToBack);
+    if (keys[2] == true) rightPaddle.moveUpAndDraw(graphToBack);
+    if (keys[3] == true) rightPaddle.moveDownAndDraw(graphToBack);
 
     twoDGraph.drawImage(back, null, 0, 0);
   }

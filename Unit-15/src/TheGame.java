@@ -1,6 +1,6 @@
 //(c) A+ Computer Science
 //www.apluscompsci.com
-//Name -
+//Name - Daniel Egorov
 
 import java.awt.Component;
 import javax.swing.JFrame;

@@ -1,6 +1,6 @@
 //(c) A+ Computer Science
 //www.apluscompsci.com
-//Name -
+//Name - Daniel Egorov
 
 import static java.lang.Character.*;
 
@@ -18,17 +18,18 @@ public class PaddleTestTwo extends Canvas implements KeyListener, Runnable {
 
   private Ball ball;
   private Paddle leftPaddle;
+  private Paddle rightPaddle;
   private boolean[] keys; //keeps track of what keys are pressed
 
   public PaddleTestTwo() {
     //set up all game variables
 
     //instantiate a Ball
-
+    ball = new Ball(400, 300, Color.red);
     //instantiate a left Paddle
-
+    leftPaddle = new Paddle(10, 300, 10, 60, Color.blue);
     //instantiate a right Paddle
-
+    rightPaddle = new Paddle(550, 300, 10, 60, Color.blue);
     keys = new boolean[5];
 
     //set up the Canvas
@@ -46,6 +47,7 @@ public class PaddleTestTwo extends Canvas implements KeyListener, Runnable {
   public void paint(Graphics window) {
     ball.moveAndDraw(window);
     leftPaddle.draw(window);
+    rightPaddle.draw(window);
 
     if (!(ball.getX() >= 10 && ball.getX() <= 550)) {
       ball.setXSpeed(-ball.getXSpeed());
@@ -55,16 +57,50 @@ public class PaddleTestTwo extends Canvas implements KeyListener, Runnable {
       ball.setYSpeed(-ball.getYSpeed());
     }
 
+    if (
+      ball.getX() <= leftPaddle.getX() + leftPaddle.getWidth() + Math.abs(ball.getXSpeed()) &&
+      (
+        ball.getY() >= leftPaddle.getY() &&
+        ball.getY() <= leftPaddle.getY() + leftPaddle.getHeight() ||
+        ball.getY() + ball.getHeight() >= leftPaddle.getY() &&
+        ball.getY() + ball.getHeight() < leftPaddle.getY() + leftPaddle.getHeight()
+      )
+    ) {
+      if (ball.getX() <= leftPaddle.getX() + leftPaddle.getWidth() - Math.abs(ball.getXSpeed())) ball.setYSpeed(
+        -ball.getYSpeed()
+      ); else ball.setXSpeed(-ball.getXSpeed());
+    }
+
+    if (
+      ball.getX() >= rightPaddle.getX() - rightPaddle.getWidth() - Math.abs(ball.getXSpeed()) &&
+      (
+        ball.getY() >= rightPaddle.getY() &&
+        ball.getY() <= rightPaddle.getY() + rightPaddle.getHeight() ||
+        ball.getY() + ball.getHeight() >= rightPaddle.getY() &&
+        ball.getY() + ball.getHeight() < rightPaddle.getY() + rightPaddle.getHeight()
+      )
+    ) {
+      if (ball.getX() >= rightPaddle.getX() - rightPaddle.getWidth() + Math.abs(ball.getXSpeed())) ball.setYSpeed(
+        -ball.getYSpeed()
+      ); else ball.setXSpeed(-ball.getXSpeed());
+    }
+
     if (keys[0] == true) {
       //move left paddle up and draw it on the window
-      leftPaddle.moveUpAndDraw(window);
+      if (leftPaddle.getY() - leftPaddle.getSpeed() > 0) leftPaddle.moveUpAndDraw(window);
     }
     if (keys[1] == true) {
       //move left paddle down and draw it on the window
-
+      if (leftPaddle.getY() + leftPaddle.getSpeed() + leftPaddle.getHeight() < 450) leftPaddle.moveDownAndDraw(window);
     }
-    if (keys[2] == true) {}
-    if (keys[3] == true) {}
+    if (keys[2] == true) {
+      if (rightPaddle.getY() - rightPaddle.getSpeed() > 0) rightPaddle.moveUpAndDraw(window);
+    }
+    if (keys[3] == true) {
+      if (rightPaddle.getY() + rightPaddle.getSpeed() + rightPaddle.getHeight() < 450) rightPaddle.moveDownAndDraw(
+        window
+      );
+    }
   }
 
   public void keyPressed(KeyEvent e) {
@@ -101,9 +137,7 @@ public class PaddleTestTwo extends Canvas implements KeyListener, Runnable {
     }
   }
 
-  public void keyTyped(KeyEvent e) {
-    //no code needed here
-  }
+  public void keyTyped(KeyEvent e) {}
 
   public void run() {
     try {

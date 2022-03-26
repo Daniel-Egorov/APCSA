@@ -1,6 +1,6 @@
 //(c) A+ Computer Science
 //www.apluscompsci.com
-//Name --
+//Name - Daniel Egorov
 
 import static java.lang.System.*;
 

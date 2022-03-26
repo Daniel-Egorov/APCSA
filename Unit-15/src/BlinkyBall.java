@@ -19,15 +19,7 @@ class BlinkyBall extends Ball {
 
   public BlinkyBall(int x, int y, int wid, int ht, int xSpd, int ySpd) {}
 
-  public BlinkyBall(
-    int x,
-    int y,
-    int wid,
-    int ht,
-    Color col,
-    int xSpd,
-    int ySpd
-  ) {}
+  public BlinkyBall(int x, int y, int wid, int ht, Color col, int xSpd, int ySpd) {}
 
   public Color randomColor() {
     int r = 0; //use Math.random()

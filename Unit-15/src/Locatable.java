@@ -1,6 +1,6 @@
 //(c) A+ Computer Science
 //www.apluscompsci.com
-//Name -
+//Name - Daniel Egorov
 
 public interface Locatable {
   public void setPos(int x, int y);

@@ -18,15 +18,7 @@ class SpeedUpBall extends Ball {
 
   public SpeedUpBall(int x, int y, int wid, int ht, int xSpd, int ySpd) {}
 
-  public SpeedUpBall(
-    int x,
-    int y,
-    int wid,
-    int ht,
-    Color col,
-    int xSpd,
-    int ySpd
-  ) {}
+  public SpeedUpBall(int x, int y, int wid, int ht, Color col, int xSpd, int ySpd) {}
 
   public void setXSpeed(int xSpd) {}
 
