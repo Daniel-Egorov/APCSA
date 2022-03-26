@@ -115,7 +115,9 @@ public class Ball extends Block implements Collidable {
     if (!(obj instanceof Block)) return false;
     Block other = (Block) obj;
     if (!(this.getY() <= other.getY() + other.getHeight())) return false;
-    if (!(this.getX() >= other.getX() || this.getX() + this.getWidth() <= other.getX() + other.getWidth())) return false;
+    if (
+      !(this.getX() >= other.getX() || this.getX() + this.getWidth() <= other.getX() + other.getWidth())
+    ) return false;
     return true;
   }
 
@@ -123,7 +125,9 @@ public class Ball extends Block implements Collidable {
     if (!(obj instanceof Block)) return false;
     Block other = (Block) obj;
     if (!(this.getY() + this.getHeight() >= other.getY())) return false;
-    if (!(this.getX() <= other.getX() + other.getWidth() || this.getX() + this.getWidth() >= other.getX())) return false;
+    if (
+      !(this.getX() <= other.getX() + other.getWidth() || this.getX() + this.getWidth() >= other.getX())
+    ) return false;
     return true;
   }
 
