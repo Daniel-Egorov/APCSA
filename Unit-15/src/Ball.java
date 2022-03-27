@@ -32,6 +32,11 @@ public class Ball extends Block implements Collidable {
     this.setSpeed(3, 1);
   }
 
+  public Ball(int x, int y, int width, int height, int xSpeed, int ySpeed) {
+    super(x, y, width, height);
+    this.setSpeed(xSpeed, ySpeed);
+  }
+
   public Ball(int x, int y, int width, int height, Color color) {
     super(x, y, width, height, color);
     this.setSpeed(3, 1);
@@ -116,7 +121,7 @@ public class Ball extends Block implements Collidable {
     Block other = (Block) obj;
     if (!(this.getY() <= other.getY() + other.getHeight())) return false;
     if (
-      !(this.getX() >= other.getX() || this.getX() + this.getWidth() <= other.getX() + other.getWidth())
+      !(this.getX() >= other.getX() && this.getX() + this.getWidth() <= other.getX() + other.getWidth())
     ) return false;
     return true;
   }
@@ -126,7 +131,7 @@ public class Ball extends Block implements Collidable {
     Block other = (Block) obj;
     if (!(this.getY() + this.getHeight() >= other.getY())) return false;
     if (
-      !(this.getX() <= other.getX() + other.getWidth() || this.getX() + this.getWidth() >= other.getX())
+      !(this.getX() <= other.getX() + other.getWidth() && this.getX() + this.getWidth() >= other.getX())
     ) return false;
     return true;
   }
