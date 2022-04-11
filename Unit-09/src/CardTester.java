@@ -43,12 +43,8 @@ public class CardTester {
 
     // test matches()
     System.out.println("cardOne matches cardTwo: " + cardOne.matches(cardTwo));
-    System.out.println(
-      "cardOne matches cardThree: " + cardOne.matches(cardThree)
-    );
-    System.out.println(
-      "cardTwo matches cardThree: " + cardTwo.matches(cardThree)
-    );
+    System.out.println("cardOne matches cardThree: " + cardOne.matches(cardThree));
+    System.out.println("cardTwo matches cardThree: " + cardTwo.matches(cardThree));
     System.out.println("cardOne matches cardOne: " + cardOne.matches(cardOne));
   }
 }

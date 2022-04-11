@@ -24,9 +24,7 @@ public class BiggestDouble {
   }
 
   public double getBiggest() {
-    if (
-      this.one > this.two && this.one > this.three && this.one > this.four
-    ) return this.one; else if (
+    if (this.one > this.two && this.one > this.three && this.one > this.four) return this.one; else if (
       this.two > this.one && this.two > this.three && this.two > this.four
     ) return this.two; else if (
       this.three > this.one && this.three > this.two && this.three > this.four

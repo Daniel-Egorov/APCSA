@@ -58,8 +58,6 @@ public class Perfect {
 
   //add a toString
   public String toString() {
-    if (this.isPerfect()) return this.number + " is perfect."; else return (
-      this.number + " is not perfect."
-    );
+    if (this.isPerfect()) return this.number + " is perfect."; else return (this.number + " is not perfect.");
   }
 }

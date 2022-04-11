@@ -13,9 +13,7 @@ public class TriangleWord {
   public static void printTriangle(String word) {
     for (int j = 1; j < word.length() + 1; j++) {
       String toPrint = word.substring(0, j);
-      for (int i = 0; i < toPrint.length(); i++) out.print(
-        word.substring(0, j)
-      );
+      for (int i = 0; i < toPrint.length(); i++) out.print(word.substring(0, j));
       out.println();
     }
   }

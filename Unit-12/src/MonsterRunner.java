@@ -42,8 +42,6 @@ public class MonsterRunner {
 
     if (monsterOne.namesTheSame(monsterTwo)) System.out.println(
       "Monster one has the same name as Monster two"
-    ); else System.out.println(
-      "Monster one does not have the same name as Monster two"
-    );
+    ); else System.out.println("Monster one does not have the same name as Monster two");
   }
 }

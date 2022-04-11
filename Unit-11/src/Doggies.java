@@ -22,18 +22,14 @@ public class Doggies {
 
   public String getNameOfOldest() {
     Dog oldest = pups[0];
-    for (int i = 0; i < this.pups.length; i++) if (
-      pups[i].getAge() > oldest.getAge()
-    ) oldest = pups[i];
+    for (int i = 0; i < this.pups.length; i++) if (pups[i].getAge() > oldest.getAge()) oldest = pups[i];
 
     return oldest.getName();
   }
 
   public String getNameOfYoungest() {
     Dog youngest = pups[0];
-    for (int i = 0; i < this.pups.length; i++) if (
-      pups[i].getAge() < youngest.getAge()
-    ) youngest = pups[i];
+    for (int i = 0; i < this.pups.length; i++) if (pups[i].getAge() < youngest.getAge()) youngest = pups[i];
 
     return youngest.getName();
   }

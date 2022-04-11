@@ -14,9 +14,7 @@ import java.util.Scanner;
 public class WordRunner {
 
   public static void main(String args[]) throws IOException {
-    Scanner file = new Scanner(
-      new File("/Users/eggnog/Developer/APCSA/Unit-12/src/words.dat")
-    );
+    Scanner file = new Scanner(new File("/Users/eggnog/Developer/APCSA/Unit-12/src/words.dat"));
 
     int size = file.nextInt();
     file.nextLine();

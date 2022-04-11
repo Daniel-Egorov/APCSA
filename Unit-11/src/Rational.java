@@ -41,12 +41,7 @@ class Rational implements Comparable<Rational> {
     //new numerator = (num1 * den2 + num2 * den1)
     //new denominator = (den1 * den2)
     this.setRational(
-        (
-          this.numerator *
-          other.getDenom() +
-          other.getNumer() *
-          this.denominator
-        ),
+        (this.numerator * other.getDenom() + other.getNumer() * this.denominator),
         (this.denominator * other.getDenom())
       );
     this.reduce();
@@ -100,9 +95,7 @@ class Rational implements Comparable<Rational> {
   public int compareTo(Rational other) {
     double otherDiv = (double) other.getNumer() / other.getDenom();
     double thisDiv = (double) this.numerator / this.denominator;
-    if (thisDiv > otherDiv) return 1; else if (
-      thisDiv < otherDiv
-    ) return -1; else return 0;
+    if (thisDiv > otherDiv) return 1; else if (thisDiv < otherDiv) return -1; else return 0;
   }
 
   //write  toString() method

@@ -34,8 +34,7 @@ public class WordSortTwo {
 
   public String toString() {
     String output = "";
-    for (int i = 0; i < this.wordRay.length; i++) output +=
-      this.wordRay[i] + "\n";
+    for (int i = 0; i < this.wordRay.length; i++) output += this.wordRay[i] + "\n";
     return output + "\n\n";
   }
 }

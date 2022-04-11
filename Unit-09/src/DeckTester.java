@@ -22,7 +22,7 @@ public class DeckTester {
       "five",
       "four",
       "three",
-      "two",
+      "two"
     };
 
     String[] suits = { "spades", "diamonds", "clubs", "hearts" };

@@ -39,65 +39,49 @@ public class WordSearch {
 
   public boolean checkRight(String w, int r, int c) {
     if (this.tooLongRight(w, r, c)) return false;
-    for (int i = 0; i < w.length(); i++) if (
-      !w.substring(i, i + 1).equals(this.m[r][c + i])
-    ) return false;
+    for (int i = 0; i < w.length(); i++) if (!w.substring(i, i + 1).equals(this.m[r][c + i])) return false;
     return true;
   }
 
   public boolean checkLeft(String w, int r, int c) {
     if (this.tooLongLeft(w, r, c)) return false;
-    for (int i = 0; i < w.length(); i++) if (
-      !w.substring(i, i + 1).equals(this.m[r][c - i])
-    ) return false;
+    for (int i = 0; i < w.length(); i++) if (!w.substring(i, i + 1).equals(this.m[r][c - i])) return false;
     return true;
   }
 
   public boolean checkUp(String w, int r, int c) {
     if (this.tooLongUp(w, r, c)) return false;
-    for (int i = 0; i < w.length(); i++) if (
-      !w.substring(i, i + 1).equals(this.m[r - i][c])
-    ) return false;
+    for (int i = 0; i < w.length(); i++) if (!w.substring(i, i + 1).equals(this.m[r - i][c])) return false;
     return true;
   }
 
   public boolean checkDown(String w, int r, int c) {
     if (this.tooLongDown(w, r, c)) return false;
-    for (int i = 0; i < w.length(); i++) if (
-      !w.substring(i, i + 1).equals(this.m[r + i][c])
-    ) return false;
+    for (int i = 0; i < w.length(); i++) if (!w.substring(i, i + 1).equals(this.m[r + i][c])) return false;
     return true;
   }
 
   public boolean checkDiagUpRight(String w, int r, int c) {
     if (this.tooLongUp(w, r, c) || this.tooLongRight(w, r, c)) return false;
-    for (int i = 0; i < w.length(); i++) if (
-      !w.substring(i, i + 1).equals(this.m[r - i][c + i])
-    ) return false;
+    for (int i = 0; i < w.length(); i++) if (!w.substring(i, i + 1).equals(this.m[r - i][c + i])) return false;
     return true;
   }
 
   public boolean checkDiagUpLeft(String w, int r, int c) {
     if (this.tooLongUp(w, r, c) || this.tooLongLeft(w, r, c)) return false;
-    for (int i = 0; i < w.length(); i++) if (
-      !w.substring(i, i + 1).equals(this.m[r - i][c - i])
-    ) return false;
+    for (int i = 0; i < w.length(); i++) if (!w.substring(i, i + 1).equals(this.m[r - i][c - i])) return false;
     return true;
   }
 
   public boolean checkDiagDownLeft(String w, int r, int c) {
     if (this.tooLongDown(w, r, c) || this.tooLongLeft(w, r, c)) return false;
-    for (int i = 0; i < w.length(); i++) if (
-      !w.substring(i, i + 1).equals(this.m[r + i][c - i])
-    ) return false;
+    for (int i = 0; i < w.length(); i++) if (!w.substring(i, i + 1).equals(this.m[r + i][c - i])) return false;
     return true;
   }
 
   public boolean checkDiagDownRight(String w, int r, int c) {
     if (this.tooLongDown(w, r, c) || this.tooLongRight(w, r, c)) return false;
-    for (int i = 0; i < w.length(); i++) if (
-      !w.substring(i, i + 1).equals(this.m[r + i][c + i])
-    ) return false;
+    for (int i = 0; i < w.length(); i++) if (!w.substring(i, i + 1).equals(this.m[r + i][c + i])) return false;
     return true;
   }
 

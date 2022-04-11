@@ -137,16 +137,12 @@ public class CardGameGUI extends JFrame implements ActionListener {
         displayCards[k].setIcon(icon);
         displayCards[k].setVisible(true);
       } else {
-        throw new RuntimeException(
-          "Card image not found: \"" + cardImageFileName + "\""
-        );
+        throw new RuntimeException("Card image not found: \"" + cardImageFileName + "\"");
       }
     }
     statusMsg.setText(board.deckSize() + " undealt cards remain.");
     statusMsg.setVisible(true);
-    totalsMsg.setText(
-      "You've won " + totalWins + " out of " + totalGames + " games."
-    );
+    totalsMsg.setText("You've won " + totalWins + " out of " + totalGames + " games.");
     totalsMsg.setVisible(true);
     pack();
     panel.repaint();
@@ -189,12 +185,7 @@ public class CardGameGUI extends JFrame implements ActionListener {
     for (int k = 0; k < board.size(); k++) {
       displayCards[k] = new JLabel();
       panel.add(displayCards[k]);
-      displayCards[k].setBounds(
-          cardCoords[k].x,
-          cardCoords[k].y,
-          CARD_WIDTH,
-          CARD_HEIGHT
-        );
+      displayCards[k].setBounds(cardCoords[k].x, cardCoords[k].y, CARD_WIDTH, CARD_HEIGHT);
       displayCards[k].addMouseListener(new MyMouseListener());
       selections[k] = false;
     }
@@ -207,12 +198,7 @@ public class CardGameGUI extends JFrame implements ActionListener {
     restartButton = new JButton();
     restartButton.setText("Restart");
     panel.add(restartButton);
-    restartButton.setBounds(
-      BUTTON_LEFT,
-      BUTTON_TOP + BUTTON_HEIGHT_INC,
-      100,
-      30
-    );
+    restartButton.setBounds(BUTTON_LEFT, BUTTON_TOP + BUTTON_HEIGHT_INC, 100, 30);
     restartButton.addActionListener(this);
 
     statusMsg = new JLabel(board.deckSize() + " undealt cards remain.");
@@ -235,10 +221,7 @@ public class CardGameGUI extends JFrame implements ActionListener {
     panel.add(lossMsg);
     lossMsg.setVisible(false);
 
-    totalsMsg =
-      new JLabel(
-        "You've won " + totalWins + " out of " + totalGames + " games."
-      );
+    totalsMsg = new JLabel("You've won " + totalWins + " out of " + totalGames + " games.");
     totalsMsg.setBounds(LABEL_LEFT, LABEL_TOP + 2 * LABEL_HEIGHT_INC, 250, 30);
     panel.add(totalsMsg);
 

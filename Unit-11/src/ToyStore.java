@@ -25,10 +25,7 @@ public class ToyStore {
         Toy temp = this.getThatToy(newToys[i]);
         temp.setCount(temp.getCount() + 1); // increment the toy count by one
         // replace the toy object with the newly incremented by one toy object
-        this.toyList.set(
-            this.toyList.indexOf(this.getThatToy(newToys[i])),
-            temp
-          );
+        this.toyList.set(this.toyList.indexOf(this.getThatToy(newToys[i])), temp);
       } else {
         Toy temp = new Toy();
         temp.setName(newToys[i]);
@@ -54,9 +51,7 @@ public class ToyStore {
   public void sortToysByCount() {
     for (int i = 0; i < this.toyList.size() - 1; i++) {
       for (int j = 0; j < this.toyList.size() - 1; j++) {
-        if (
-          this.toyList.get(j).getCount() < this.toyList.get(j + 1).getCount()
-        ) {
+        if (this.toyList.get(j).getCount() < this.toyList.get(j + 1).getCount()) {
           Toy temp = this.toyList.get(j + 1);
           this.toyList.set(j + 1, this.toyList.get(j));
           this.toyList.set(j, temp);
@@ -71,9 +66,7 @@ public class ToyStore {
 
   public static void main(String[] args) {
     ToyStore toyStore = new ToyStore();
-    toyStore.loadToys(
-      "sorry bat sorry sorry sorry train train teddy teddy ball ball"
-    );
+    toyStore.loadToys("sorry bat sorry sorry sorry train train teddy teddy ball ball");
     System.out.println(toyStore);
     System.out.println(toyStore.getMostFrequentToy());
   }

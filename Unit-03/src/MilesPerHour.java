@@ -41,12 +41,6 @@ public class MilesPerHour {
 
   //create a print or toString or both
   public String toString() {
-    return String.format(
-      "%d miles in %d hours and %d minutes = %.3f MPH",
-      distance,
-      hours,
-      minutes,
-      mph
-    );
+    return String.format("%d miles in %d hours and %d minutes = %.3f MPH", distance, hours, minutes, mph);
   }
 }

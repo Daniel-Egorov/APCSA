@@ -19,9 +19,7 @@ public class Shuffler {
    * @param args is not used.
    */
   public static void main(String[] args) {
-    System.out.println(
-      "Results of " + SHUFFLE_COUNT + " consecutive perfect shuffles:"
-    );
+    System.out.println("Results of " + SHUFFLE_COUNT + " consecutive perfect shuffles:");
     int[] values1 = new int[VALUE_COUNT];
     for (int i = 0; i < values1.length; i++) {
       values1[i] = i;
@@ -36,11 +34,7 @@ public class Shuffler {
     }
     System.out.println();
 
-    System.out.println(
-      "Results of " +
-      SHUFFLE_COUNT +
-      " consecutive efficient selection shuffles:"
-    );
+    System.out.println("Results of " + SHUFFLE_COUNT + " consecutive efficient selection shuffles:");
     int[] values2 = new int[VALUE_COUNT];
     for (int i = 0; i < values2.length; i++) {
       values2[i] = i;

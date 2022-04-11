@@ -12,9 +12,7 @@ import java.util.Scanner;
 public class WordSortTwoRunner {
 
   public static void main(String args[]) throws IOException {
-    Scanner file = new Scanner(
-      new File("/Users/eggnog/Developer/APCSA/Unit-13/src/wordsorttwo.dat")
-    );
+    Scanner file = new Scanner(new File("/Users/eggnog/Developer/APCSA/Unit-13/src/wordsorttwo.dat"));
     int size = file.nextInt();
     file.nextLine();
     for (int i = 0; i < size; i++) {

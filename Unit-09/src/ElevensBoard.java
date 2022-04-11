@@ -27,37 +27,18 @@ public class ElevensBoard extends Board {
     "10",
     "jack",
     "queen",
-    "king",
+    "king"
   };
 
   /**
    * The suits of the cards for this game to be sent to the deck.
    */
-  private static final String[] SUITS = {
-    "spades",
-    "hearts",
-    "diamonds",
-    "clubs",
-  };
+  private static final String[] SUITS = { "spades", "hearts", "diamonds", "clubs" };
 
   /**
    * The values of the cards for this game to be sent to the deck.
    */
-  private static final int[] POINT_VALUES = {
-    1,
-    2,
-    3,
-    4,
-    5,
-    6,
-    7,
-    8,
-    9,
-    10,
-    0,
-    0,
-    0,
-  };
+  private static final int[] POINT_VALUES = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 0, 0, 0 };
 
   /**
    * Flag used to control debugging print statements.
@@ -116,9 +97,7 @@ public class ElevensBoard extends Board {
         Integer indexJ = selectedCards.get(j);
         Integer indexI = selectedCards.get(i);
         if (
-          this.cardAt(indexJ.intValue()).pointValue() +
-          this.cardAt(indexI.intValue()).pointValue() ==
-          11
+          this.cardAt(indexJ.intValue()).pointValue() + this.cardAt(indexI.intValue()).pointValue() == 11
         ) return true;
       }
     }
@@ -142,9 +121,9 @@ public class ElevensBoard extends Board {
     for (int i = 0; i < selectedCards.size(); i++) {
       Integer index = selectedCards.get(i);
       Card card = this.cardAt(index.intValue());
-      if (card.rank().equals("king")) hasKing = true; else if (
-        card.rank().equals("queen")
-      ) hasQueen = true; else if (card.rank().equals("jack")) hasJack = true;
+      if (card.rank().equals("king")) hasKing = true; else if (card.rank().equals("queen")) hasQueen = true; else if (
+        card.rank().equals("jack")
+      ) hasJack = true;
     }
     return hasJack && hasQueen && hasKing;
   }

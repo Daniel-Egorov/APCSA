@@ -22,29 +22,17 @@ public class NumberVerifyRunner {
     //add in more test cases
     System.out.print("Enter an integer :: ");
     int test = keyboard.nextInt();
-    System.out.println(
-      String.format("%d is odd :: %b", test, NumberVerify.isOdd(test))
-    );
-    System.out.println(
-      String.format("%d is even :: %b", test, NumberVerify.isEven(test))
-    );
+    System.out.println(String.format("%d is odd :: %b", test, NumberVerify.isOdd(test)));
+    System.out.println(String.format("%d is even :: %b", test, NumberVerify.isEven(test)));
 
     System.out.print("Enter an integer :: ");
     test = keyboard.nextInt();
-    System.out.println(
-      String.format("%d is odd :: %b", test, NumberVerify.isOdd(test))
-    );
-    System.out.println(
-      String.format("%d is even :: %b", test, NumberVerify.isEven(test))
-    );
+    System.out.println(String.format("%d is odd :: %b", test, NumberVerify.isOdd(test)));
+    System.out.println(String.format("%d is even :: %b", test, NumberVerify.isEven(test)));
 
     System.out.print("Enter an integer :: ");
     test = keyboard.nextInt();
-    System.out.println(
-      String.format("%d is odd :: %b", test, NumberVerify.isOdd(test))
-    );
-    System.out.println(
-      String.format("%d is even :: %b", test, NumberVerify.isEven(test))
-    );
+    System.out.println(String.format("%d is odd :: %b", test, NumberVerify.isOdd(test)));
+    System.out.println(String.format("%d is even :: %b", test, NumberVerify.isEven(test)));
   }
 }

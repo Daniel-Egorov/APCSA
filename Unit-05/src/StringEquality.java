@@ -28,8 +28,8 @@ public class StringEquality {
   }
 
   public String toString() {
-    if (!this.checkEquality()) return (
-      wordOne + " does not have the same letters as " + wordTwo + "\n"
-    ); else return wordOne + " has the same letters as " + wordTwo + "\n";
+    if (!this.checkEquality()) return (wordOne + " does not have the same letters as " + wordTwo + "\n"); else return (
+      wordOne + " has the same letters as " + wordTwo + "\n"
+    );
   }
 }

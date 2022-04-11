@@ -15,9 +15,7 @@ public class RPSRunner {
     char response = 0;
 
     do {
-      System.out.print(
-        "\nRock Paper Scissors - pick your weapon [R, P, S] :: "
-      );
+      System.out.print("\nRock Paper Scissors - pick your weapon [R, P, S] :: ");
 
       player = keyboard.next().toUpperCase();
 

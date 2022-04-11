@@ -50,12 +50,7 @@ public class RockPaperScissors {
 
   public String toString() {
     String winner = this.determineWinner();
-    String output =
-      "player had " +
-      this.playChoice +
-      "\ncomputer had " +
-      this.compChoice +
-      "\n";
+    String output = "player had " + this.playChoice + "\ncomputer had " + this.compChoice + "\n";
     String p = ""; // store the full word of the player's choice
     String c = ""; // store the full word of the computer's choice
 
@@ -89,8 +84,7 @@ public class RockPaperScissors {
         break;
     }
 
-    if (winner.equals("Player")) output +=
-      " <<" + p + " beats " + c + ">>"; else output +=
+    if (winner.equals("Player")) output += " <<" + p + " beats " + c + ">>"; else output +=
       " <<" + c + " beats " + p + ">>";
 
     return output;

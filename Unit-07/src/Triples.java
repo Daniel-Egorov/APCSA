@@ -41,8 +41,7 @@ public class Triples {
           if (c % 2 == 0) continue;
           // if GCF of a, b, c is not 1, skip combo
           if (this.greatestCommonFactor(a, b, c) != 1) continue;
-          if (Math.pow(a, 2) + Math.pow(b, 2) == Math.pow(c, 2)) output +=
-            a + " " + b + " " + c + "\n";
+          if (Math.pow(a, 2) + Math.pow(b, 2) == Math.pow(c, 2)) output += a + " " + b + " " + c + "\n";
         }
       }
     }
