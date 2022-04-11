@@ -25,7 +25,9 @@ public class Pong extends Canvas implements KeyListener, Runnable {
   private Wall leftWall;
   private Wall topWall;
   private Wall bottomWall;
-
+  private int playerOneScore;
+  private int playerTwoScore;
+  
   public Pong() {
     //set up all variables related to the game
     this.ball = new Ball(200, 200, Color.orange);
@@ -35,6 +37,8 @@ public class Pong extends Canvas implements KeyListener, Runnable {
     this.leftWall = new Wall(0, 0, 10, 600);
     this.topWall = new Wall(0, 0, 800, 10);
     this.bottomWall = new Wall(0, 580, 800, 10);
+    this.playerOneScore = 0;
+    this.playerTwoScore = 0;
     keys = new boolean[4];
 
     setBackground(Color.WHITE);
@@ -66,8 +70,15 @@ public class Pong extends Canvas implements KeyListener, Runnable {
 
     //see if ball hits left wall or right wall
     if (ball.didCollideLeft(this.leftWall) || ball.didCollideRight(this.rightWall)) {
-      ball.setXSpeed(0);
-      ball.setYSpeed(0);
+      if (ball.didCollideLeft(this.leftWall)) playerTwoScore++;
+      else playerOneScore++;
+      ball.draw(graphToBack, Color.WHITE);
+      ball.setPos(200, 200);
+      ball.setXSpeed(-ball.getXSpeed());
+      leftPaddle.draw(graphToBack, Color.WHITE);
+      rightPaddle.draw(graphToBack, Color.WHITE);
+      leftPaddle.setPos(10, 300);
+      rightPaddle.setPos(780, 300);
     }
 
     //see if the ball hits the top or bottom wall
@@ -91,6 +102,8 @@ public class Pong extends Canvas implements KeyListener, Runnable {
     if (keys[3] == true) rightPaddle.moveDownAndDraw(graphToBack);
 
     twoDGraph.drawImage(back, null, 0, 0);
+    twoDGraph.drawString("player one: " + playerOneScore, 400, 430);
+    twoDGraph.drawString("player two: " + playerTwoScore, 400, 450);
   }
 
   public void keyPressed(KeyEvent e) {
