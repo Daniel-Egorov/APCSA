@@ -91,3 +91,12 @@ This repository contains all the code I produced during my AP Computer Science A
 - [OddToEvenRunner](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-09_ArrayLists/src/OddToEvenRunner.java)
 - [ListSumFirst](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-09_ArrayLists/src/ListSumFirst.java)
 - [SumFirstRunner](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-09_ArrayLists/src/SumFirstRunner.java)
+
+## Unit 9 ArrayLists
+- [ListDown](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-09_ArrayLists/src/ListDown.java)
+- [DownRunner](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-09_ArrayLists/src/DownRunner.java)
+- [ListOddToEven](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-09_ArrayLists/src/ListOddToEven.java)
+- [OddToEvenRunner](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-09_ArrayLists/src/OddToEvenRunner.java)
+- [ListSumFirst](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-09_ArrayLists/src/ListSumFirst.java)
+- [SumFirstRunner](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-09_ArrayLists/src/SumFirstRunner.java)
+
