@@ -121,3 +121,13 @@ This repository contains all the code I produced during my AP Computer Science A
 - [MonsterRunner](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-12/src/MonsterRunner.java)
 - [Word](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-12/src/Word.java)
 - [WordRunner](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-12/src/WordRunner.java)
+
+## Unit 13
+- [NumberShifter](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-13/src/NumberShifter.java)
+- [NumberShifterRunner](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-13/src/NumberShifterRunner.java)
+- [NumberSorter](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-13/src/NumberSorter.java)
+- [NumberSorterRunner](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-13/src/NumberSorterRunner.java)
+- [WordSearch](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-13/src/WordSearch.java)
+- [WordSearchRunner](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-13/src/WordSearchRunner.java)
+- [WordSortTwo](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-13/src/WordSortTwo.java)
+- [WordSortTwoRunner](https://github.com/Daniel-Egorov/Egorov_Daniel_apcsa-2022/blob/main/Unit-13/src/WordSortTwoRunner.java)
