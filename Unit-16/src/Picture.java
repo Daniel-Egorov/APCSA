@@ -15,6 +15,7 @@ import java.util.List; // resolves problem with java.awt.List and java.util.List
  */
 public class Picture extends SimplePicture 
 {
+  private static String pathPrefix = "/Users/eggnog/Developer/APCSA/Unit-16/src/images/";
   ///////////////////// constructors //////////////////////////////////
   
   /**
@@ -173,11 +174,33 @@ public class Picture extends SimplePicture
     }   
   }
 
+  public void copy(
+    Picture fromPic,
+    int fromStartRow,
+    int fromStartCol,
+    int fromEndRow,
+    int fromEndCol,
+    int toStartRow,
+    int toStartCol
+  ) {
+    Pixel fromPixel = null;
+    Pixel toPixel = null;
+    Pixel[][] toPixels = this.getPixels2D();
+    Pixel[][] fromPixels = fromPic.getPixels2D();
+    for (int fromRow = fromStartRow, toRow = toStartRow; fromRow < fromEndRow && toRow < toPixels.length; fromRow++, toRow++) {
+      for (int fromCol = fromStartCol, toCol = toStartCol; fromCol < fromEndCol && toCol < toPixels[0].length; fromCol++, toCol++) {
+        fromPixel = fromPixels[fromRow][fromCol];
+        toPixel = toPixels[toRow][toCol];
+        toPixel.setColor(fromPixel.getColor());
+      }
+    }
+  }
+
   /** Method to create a collage of several pictures */
   public void createCollage()
   {
-    Picture flower1 = new Picture("flower1.jpg");
-    Picture flower2 = new Picture("flower2.jpg");
+    Picture flower1 = new Picture(pathPrefix + "flower1.jpg");
+    Picture flower2 = new Picture(pathPrefix + "flower2.jpg");
     this.copy(flower1,0,0);
     this.copy(flower2,100,0);
     this.copy(flower1,200,0);
@@ -188,6 +211,17 @@ public class Picture extends SimplePicture
     this.copy(flower2,500,0);
     this.mirrorVertical();
     this.write("collage.jpg");
+  }
+
+  public void myCollage() {
+    Picture beach = new Picture(pathPrefix + "beach.jpg");
+    beach.mirrorVerticalRightToLeft();
+    this.copy(beach, 0, 0);
+    Picture motorcycle = new Picture(pathPrefix + "redMotorcycle.jpg");
+    motorcycle.negate();
+    this.copy(motorcycle, 71, 43, 420, 540, 115, 130);
+    Picture seagull = new Picture(pathPrefix + "seagull.jpg");
+    this.copy(seagull, 235, 238, 320, 344, 150, 475);
   }
   
   
@@ -217,6 +251,228 @@ public class Picture extends SimplePicture
     }
   }
   
+  public void keepOnlyBlue() {
+    Pixel[][] pixels = this.getPixels2D();
+    for (Pixel[] rowArray : pixels) {
+      for (Pixel pixelObj : rowArray) {
+        pixelObj.setRed(0);
+        pixelObj.setGreen(0);
+      }
+    }
+  }
+
+  public void keepOnlyRed() {
+    Pixel[][] pixels = this.getPixels2D();
+    for (Pixel[] rowArray : pixels) {
+      for (Pixel pixelObj : rowArray) {
+        pixelObj.setBlue(0);
+        pixelObj.setGreen(0);
+      }
+    }
+  }
+
+  public void keepOnlyGreen() {
+    Pixel[][] pixels = this.getPixels2D();
+    for (Pixel[] rowArray : pixels) {
+      for (Pixel pixelObj : rowArray) {
+        pixelObj.setBlue(0);
+        pixelObj.setRed(0);
+      }
+    }
+  }
+
+  public void negate() {
+    Pixel[][] pixels = this.getPixels2D();
+    for (Pixel[] rowArray : pixels) {
+      for (Pixel pixelObj : rowArray) {
+        pixelObj.setRed(255 - pixelObj.getRed());
+        pixelObj.setGreen(255 - pixelObj.getGreen());
+        pixelObj.setBlue(255 - pixelObj.getBlue());
+      }
+    }
+  }
+
+  public void grayscale() {
+    Pixel[][] pixels = this.getPixels2D();
+    for (Pixel[] rowArray : pixels) {
+      for (Pixel pixelObj : rowArray) {
+        int avg = (pixelObj.getRed() + pixelObj.getGreen() + pixelObj.getBlue()) / 3;
+        pixelObj.setRed(avg);
+        pixelObj.setGreen(avg);
+        pixelObj.setBlue(avg);
+      }
+    }
+  }
+
+  public void fixUnderwater() {
+    Pixel[][] pixels = this.getPixels2D();
+    for (Pixel[] row : pixels) {
+      for (Pixel pixel : row) {
+        if (pixel.getRed() * 4 <= 255) {
+          pixel.setRed(pixel.getRed() * 4);
+        }
+        else {
+          pixel.setRed(255);
+        }
+        pixel.setGreen((int) (pixel.getGreen() / 1.15));
+        pixel.setBlue((int) (pixel.getBlue() / 1.15));
+      }
+    }
+  }
+
+  public void mirrorArms() {
+    // left arm
+    int rowLeft = 155;
+    int colTop = 105;
+    int rowRight = 190;
+    int colBottom = 170;
+    Color testPixel = new Pixel(this, 179, 163).getColor();
+
+    Pixel[][] pixels = this.getPixels2D();
+    for (int row = rowLeft; row < rowRight; row++) {
+      for (int col = colTop; col < colBottom; col++) {
+        if (pixels[row][col].colorDistance(testPixel) > 50) {
+          pixels[rowRight + (rowRight - row)][col].setColor(pixels[row][col].getColor());
+        }
+      }
+    }
+    
+    // right arm
+    rowLeft = 169;
+    colTop = 239;
+    rowRight = 195;
+    colBottom = 293;
+    int flipRow = 190;
+
+    for (int row = rowLeft; row < rowRight; row++) {
+      for (int col = colTop; col < colBottom; col++) {
+        if (pixels[row][col].colorDistance(testPixel) > 50) {
+          pixels[flipRow + (flipRow - row)][col].setColor(pixels[row][col].getColor());
+        }
+      }
+    }
+  }
+
+  public void mirrorVerticalRightToLeft() {
+    Pixel[][] pixels = this.getPixels2D();
+    Pixel leftPixel = null;
+    Pixel rightPixel = null;
+    int width = pixels[0].length;
+    for (int row = 0; row < pixels.length; row++)
+    {
+      for (int col = 0; col < width / 2; col++)
+      {
+        leftPixel = pixels[row][col];
+        rightPixel = pixels[row][width - 1 - col];
+        leftPixel.setColor(rightPixel.getColor());
+      }
+    } 
+  }
+
+  public void mirrorHorizontal() {
+    Pixel[][] pixels = this.getPixels2D();
+    Pixel topPixel = null;
+    Pixel bottomPixel = null;
+    int height = pixels.length;
+    for (int row = 0; row < height / 2; row++)
+    {
+      for (int col = 0; col < pixels[0].length; col++)
+      {
+        topPixel = pixels[row][col];
+        bottomPixel = pixels[height - 1 - row][col];
+        bottomPixel.setColor(topPixel.getColor());
+      }
+    }
+  }
+
+  public void mirrorHorizontalBotToTop() {
+    Pixel[][] pixels = this.getPixels2D();
+    Pixel topPixel = null;
+    Pixel bottomPixel = null;
+    int height = pixels.length;
+    for (int row = 0; row < height / 2; row++)
+    {
+      for (int col = 0; col < pixels[0].length; col++)
+      {
+        topPixel = pixels[row][col];
+        bottomPixel = pixels[height - 1 - row][col];
+        topPixel.setColor(bottomPixel.getColor());
+      }
+    }
+  }
+
+  public void mirrorGull() {
+    Pixel[][] pixels = this.getPixels2D();
+    int mirrorPoint = 355;
+    Pixel leftPixel = null;
+    Pixel rightPixel = null;
+
+    for (int row = 0; row < pixels.length; row++) {
+      for (int col = 0; col < pixels[0].length; col++) {
+        if (col <= mirrorPoint) {
+          int rightPixelCol = mirrorPoint - col + mirrorPoint;
+          if (!(rightPixelCol > pixels[0].length - 1)) {
+            leftPixel = pixels[row][col];
+            rightPixel = pixels[row][rightPixelCol];
+            rightPixel.setColor(leftPixel.getColor());
+          }
+        }
+      }
+    }
+  }
+
+  public void mirrorDiagonal() {
+    Pixel pixels[][] = this.getPixels2D();
+    Pixel bottomPixel = null;
+    Pixel topPixel = null;
+    int length = Math.min(pixels.length, pixels[0].length);
+    for (int i = 0; i < length; i++) {
+      for (int j = 0; j < i + 1; j++) {
+        bottomPixel = pixels[i][j];
+        topPixel = pixels[j][i];
+        topPixel.setColor(bottomPixel.getColor());
+      }
+    }
+  }
+
+  public void encodeAndDecode() {
+
+  }
+
+  public void getCountRedOverValue(int val) {
+
+  }
+
+  public void setRedToHalfValue(int val) {
+
+  }
+
+  public void getAverageForColumn(int col) {
+
+  }
+
+  public void edgeDetection2() {
+
+  }
+
+  public void chromakey() {
+
+  }
+
+  public void setRedToHalfValueInTopHalf() {
+
+  }
+
+  public void clearBlueOverValue(int val) {
+    Pixel pixels[][] = this.getPixels2D();
+    for (Pixel[] row : pixels) {
+      for (Pixel pixel : row) {
+        if (pixel.getBlue() > val) {
+          pixel.setAlpha(255);
+        }
+      }
+    }
+  }
   
   /* Main method for testing - each class in Java can have a main 
    * method 

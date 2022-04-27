@@ -51,6 +51,140 @@ public class PictureTester
     swan.edgeDetection(10);
     swan.explore();
   }
+
+  public static void testKeepOnlyBlue() {
+    Picture beach = new Picture(pathPrefix + "beach.jpg");
+    beach.explore();
+    beach.keepOnlyBlue();
+    beach.explore();
+  }
+
+  public static void testKeepOnlyRed() {
+    Picture beach = new Picture(pathPrefix + "beach.jpg");
+    beach.explore();
+    beach.keepOnlyRed();
+    beach.explore();
+  }
+
+  public static void testKeepOnlyGreen() {
+    Picture beach = new Picture(pathPrefix + "beach.jpg");
+    beach.explore();
+    beach.keepOnlyGreen();
+    beach.explore();
+  }
+
+  public static void testNegate() {
+    Picture beach = new Picture(pathPrefix + "beach.jpg");
+    beach.explore();
+    beach.negate();
+    beach.explore();
+  }
+
+  public static void testGrayscale() {
+    Picture beach = new Picture(pathPrefix + "beach.jpg");
+    beach.explore();
+    beach.grayscale();
+    beach.explore();
+  }
+
+  public static void testFixUnderwater() {
+    Picture water = new Picture(pathPrefix + "water.jpg");
+    water.explore();
+    water.fixUnderwater();
+    water.explore();
+  }
+  
+  public static void testMirrorArms() {
+    Picture snowman = new Picture(pathPrefix + "snowman.jpg");
+    snowman.explore();
+    snowman.mirrorArms();
+    snowman.explore();
+  }
+
+  public static void testMirrorGull() {
+    Picture gull = new Picture(pathPrefix + "seagull.jpg");
+    gull.explore();
+    gull.mirrorGull();
+    gull.explore();
+  }
+
+  public static void testMirrorDiagonal() {
+    Picture beach = new Picture(pathPrefix + "beach.jpg");
+    beach.explore();
+    beach.mirrorDiagonal();
+    beach.explore();
+  }
+
+  public static void testCopy() {
+    Picture beach = new Picture(pathPrefix + "beach.jpg");
+    beach.explore();
+    Picture seagull = new Picture(pathPrefix + "seagull.jpg");
+    beach.copy(seagull, 235, 238, 320, 344, 0, 0);
+    beach.explore();
+  }
+
+  public static void testEncodeAndDecode() {
+
+  }
+
+  public static void testGetCountRedOverValue(int value) {
+
+  }
+
+  public static void testSetRedToHalfValue(int value) {
+
+  }
+
+  public static void testGetAverageForColumn(int col) {
+
+  }
+
+  public static void testEdgeDetection2() {
+
+  }
+
+  public static void testChromakey() {
+
+  }
+
+  public static void testSetRedToHalfValueInTopHalf() {
+
+  }
+
+  public static void testClearBlueOverValue(int val) {
+    Picture beach = new Picture(pathPrefix + "beach.jpg");
+    beach.explore();
+    beach.clearBlueOverValue(val);
+    beach.explore();
+  }
+
+  public static void testMirrorVerticalRightToLeft() {
+    Picture swan = new Picture(pathPrefix + "swan.jpg");
+    swan.explore();
+    swan.mirrorVerticalRightToLeft();
+    swan.explore();
+  }
+  
+  public static void testMirrorHorizontal() {
+    Picture motorcycle = new Picture(pathPrefix + "redMotorcycle.jpg");
+    motorcycle.explore();
+    motorcycle.mirrorHorizontal();
+    motorcycle.explore();
+  }
+
+  public static void testMirrorHorizontalBotToTop() {
+    Picture motorcycle = new Picture(pathPrefix + "redMotorcycle.jpg");
+    motorcycle.explore();
+    motorcycle.mirrorHorizontalBotToTop();
+    motorcycle.explore();
+  }
+  
+  public static void testMyCollage() {
+    Picture canvas = new Picture(pathPrefix + "640x480.jpg");
+    canvas.myCollage();
+    canvas.explore();
+    Picture motorcycle = new Picture(pathPrefix + "redMotorcycle.jpg");
+  }
   
   /** Main method for testing.  Every class can have a main
     * method in Java */
@@ -59,27 +193,31 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
-    testZeroBlue();
-    //testKeepOnlyBlue();
-    //testKeepOnlyRed();
-    //testKeepOnlyGreen();
-    //testNegate();
-    //testGrayscale();
-    //testFixUnderwater();
-    //testMirrorVertical();
-    //testMirrorTemple();
-    //testMirrorArms();
-    //testMirrorGull();
-    //testMirrorDiagonal();
-    //testCollage();
-    //testCopy();
-    //testEdgeDetection();
-    //testEdgeDetection2();
-    //testChromakey();
-    //testEncodeAndDecode();
-    //testGetCountRedOverValue(250);
-    //testSetRedToHalfValueInTopHalf();
-    //testClearBlueOverValue(200);
-    //testGetAverageForColumn(0);
+    // testZeroBlue();
+    // testKeepOnlyBlue();
+    // testKeepOnlyRed();
+    // testKeepOnlyGreen();
+    // testNegate();
+    // testGrayscale();
+    // testFixUnderwater(); // TODO: done
+    // testMirrorVertical();
+    // testMirrorVerticalRightToLeft();
+    // testMirrorHorizontal();
+    // testMirrorHorizontalBotToTop();
+    // testMirrorTemple();
+    // testMirrorArms(); // TODO: done
+    // testMirrorGull(); // TODO: done
+    // testMirrorDiagonal(); // TODO
+    // testCollage();
+    // testCopy();
+    // testMyCollage();
+    // testEdgeDetection();
+    // testEdgeDetection2(); // TODO
+    // testChromakey(); // TODO
+    // testEncodeAndDecode(); // TODO
+    // testGetCountRedOverValue(250); // TODO
+    // testSetRedToHalfValueInTopHalf(); // TODO
+    // testClearBlueOverValue(0); // TODO
+    // testGetAverageForColumn(0); // TODO
   }
 }

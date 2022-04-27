@@ -94,6 +94,8 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
   
   /** the number system to use, 0 means starting at 0, 1 means starting at 1 */
   private int numberBase=0;
+
+  private static String pathPrefix = "/Users/eggnog/Developer/APCSA/Unit-16/src/images/";
   
   /**
    * Public constructor 
@@ -800,7 +802,7 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
    */
   public static void main( String args[])
   {
-    Picture pix = new Picture("beach.jpg");
+    Picture pix = new Picture(pathPrefix + "beach.jpg");
     pix.explore();
   }
   
