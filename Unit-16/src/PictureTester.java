@@ -183,7 +183,6 @@ public class PictureTester
     Picture canvas = new Picture(pathPrefix + "640x480.jpg");
     canvas.myCollage();
     canvas.explore();
-    Picture motorcycle = new Picture(pathPrefix + "redMotorcycle.jpg");
   }
   
   /** Main method for testing.  Every class can have a main
@@ -210,7 +209,7 @@ public class PictureTester
     // testMirrorDiagonal(); // TODO
     // testCollage();
     // testCopy();
-    // testMyCollage();
+    testMyCollage();
     // testEdgeDetection();
     // testEdgeDetection2(); // TODO
     // testChromakey(); // TODO

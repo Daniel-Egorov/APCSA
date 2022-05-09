@@ -221,7 +221,15 @@ public class Picture extends SimplePicture
     motorcycle.negate();
     this.copy(motorcycle, 71, 43, 420, 540, 115, 130);
     Picture seagull = new Picture(pathPrefix + "seagull.jpg");
+    seagull.negate();
     this.copy(seagull, 235, 238, 320, 344, 150, 475);
+    seagull.negate();
+    seagull.mirrorGull();
+    this.copy(seagull, 235, 238, 320, 475, 375, 20);
+    Picture flower1 = new Picture(pathPrefix + "flower1.jpg");
+    flower1.mirrorHorizontal();
+    this.copy(flower1, 0, 0, 99, 88, 5, 285);
+    flower1.explore();
   }
   
   
