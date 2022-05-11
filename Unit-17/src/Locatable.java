@@ -1,8 +1,8 @@
-//© A+ Computer Science  -  www.apluscompsci.com
-//Name -
-//Date -
-//Class -
-//Lab  -
+//ï¿½ A+ Computer Science  -  www.apluscompsci.com
+//Name - Daniel Egorov
+//Date - 11 May 2022
+//Class - APCSA
+//Lab  - StarFighter
 
 public interface Locatable
 {
