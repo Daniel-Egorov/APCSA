@@ -6,36 +6,25 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.io.File;
-import javax.imageio.ImageIO;
 import java.util.ArrayList;
 import java.util.List;
+import javax.imageio.ImageIO;
 
-public class AlienHorde
-{
-	private List<Alien> aliens;
+public class AlienHorde {
 
-	public AlienHorde(int size)
-	{
-	}
+  private List<Alien> aliens;
 
-	public void add(Alien al)
-	{
-	}
+  public AlienHorde(int size) {}
 
-	public void drawEmAll( Graphics window )
-	{
-	}
+  public void add(Alien al) {}
 
-	public void moveEmAll()
-	{
-	}
+  public void drawEmAll(Graphics window) {}
 
-	public void removeDeadOnes(List<Ammo> shots)
-	{
-	}
+  public void moveEmAll() {}
 
-	public String toString()
-	{
-		return "";
-	}
+  public void removeDeadOnes(List<Ammo> shots) {}
+
+  public String toString() {
+    return "";
+  }
 }

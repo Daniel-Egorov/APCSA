@@ -8,48 +8,39 @@ import java.awt.Image;
 import java.io.File;
 import javax.imageio.ImageIO;
 
-public class Ammo extends MovingThing
-{
-	private int speed;
+public class Ammo extends MovingThing {
 
-	public Ammo()
-	{
-		this(0,0,0);
-	}
+  private int speed;
 
-	public Ammo(int x, int y)
-	{
-		//add code
-	}
+  public Ammo() {
+    this(0, 0, 0);
+  }
 
-	public Ammo(int x, int y, int s)
-	{
-		//add code
-	}
+  public Ammo(int x, int y) {
+    //add code
+  }
 
-	public void setSpeed(int s)
-	{
-	   //add code
-	}
+  public Ammo(int x, int y, int s) {
+    //add code
+  }
 
-	public int getSpeed()
-	{
-	   return 0;
-	}
+  public void setSpeed(int s) {
+    //add code
+  }
 
-	public void draw( Graphics window )
-	{
-		//add code to draw the ammo
-	}
-	
-	
-	public void move( String direction )
-	{
-		//add code to draw the ammo
-	}
+  public int getSpeed() {
+    return 0;
+  }
 
-	public String toString()
-	{
-		return "";
-	}
+  public void draw(Graphics window) {
+    //add code to draw the ammo
+  }
+
+  public void move(String direction) {
+    //add code to draw the ammo
+  }
+
+  public String toString() {
+    return "";
+  }
 }

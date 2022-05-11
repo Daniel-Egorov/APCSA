@@ -2,29 +2,27 @@
 //www.apluscompsci.com
 //Name - Daniel Egorov
 
-import javax.swing.JFrame;
 import java.awt.Component;
+import javax.swing.JFrame;
 
-public class StarFighter extends JFrame
-{
-	private static final int WIDTH = 800;
-	private static final int HEIGHT = 600;
+public class StarFighter extends JFrame {
 
-	public StarFighter()
-	{
-		super("STARFIGHTER");
-		setSize(WIDTH,HEIGHT);
+  private static final int WIDTH = 800;
+  private static final int HEIGHT = 600;
 
-		OuterSpace theGame = new OuterSpace();
-		((Component)theGame).setFocusable(true);
+  public StarFighter() {
+    super("STARFIGHTER");
+    setSize(WIDTH, HEIGHT);
 
-		getContentPane().add(theGame);
+    OuterSpace theGame = new OuterSpace();
+    ((Component) theGame).setFocusable(true);
 
-		setVisible(true);
-	}
+    getContentPane().add(theGame);
 
-	public static void main( String args[] )
-	{
-		StarFighter run = new StarFighter();
-	}
+    setVisible(true);
+  }
+
+  public static void main(String args[]) {
+    StarFighter run = new StarFighter();
+  }
 }
