@@ -20,23 +20,23 @@ public class Ship extends MovingThing {
 
   public Ship(int x, int y) {
     //add code here
-    super(x, y);
+    this(x, y, 10, 10, 10);
   }
 
   public Ship(int x, int y, int s) {
     //add code here
-    super(x, y);
-    setSpeed(s);
+    this(x, y, 10, 10, s);
   }
 
   public Ship(int x, int y, int w, int h, int s) {
     super(x, y, w, h);
     speed = s;
     try {
-      URL url = getClass().getResource("/images/ship.jpg");
+      URL url = getClass().getResource("ship.jpg");
       image = ImageIO.read(url);
     } catch (Exception e) {
       //feel free to do something here
+      System.out.println(e);
     }
   }
 
@@ -51,6 +51,20 @@ public class Ship extends MovingThing {
 
   public void move(String direction) {
     //add code here
+    switch (direction) {
+      case "up":
+        setY(getY() - speed);
+        break;
+      case "down":
+        setY(getY() + speed);
+        break;
+      case "left":
+        setX(getX() - speed);
+        break;
+      case "right":
+        setX(getX() + speed);
+        break;
+    }
   }
 
   public void draw(Graphics window) {

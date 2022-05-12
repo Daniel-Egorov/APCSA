@@ -30,10 +30,11 @@ public class Alien extends MovingThing {
     super(x, y, w, h);
     speed = s;
     try {
-      URL url = getClass().getResource("/images/alien.jpg");
+      URL url = getClass().getResource("alien.jpg");
       image = ImageIO.read(url);
     } catch (Exception e) {
       //feel free to do something here
+      System.out.println(e);
     }
   }
 
