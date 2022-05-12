@@ -75,13 +75,14 @@ public class OuterSpace extends Canvas implements KeyListener, Runnable {
       ship.move("right");
     }
     if (keys[2] && ship.getY() + ship.getSpeed() > 0) {
-      ship.move("down");
+      ship.move("up");
     }
     if (keys[3] && ship.getY() + ship.getSpeed() + (ship.getHeight() * 2) < 600) {
-      ship.move("up");
+      ship.move("down");
     }
     //add code to move Ship, Alien, etc.
     ship.draw(graphToBack);
+    System.out.println(ship);
     //add in collision detection to see if Bullets hit the Aliens and if Bullets hit the Ship
 
     twoDGraph.drawImage(back, null, 0, 0);
@@ -125,9 +126,7 @@ public class OuterSpace extends Canvas implements KeyListener, Runnable {
     repaint();
   }
 
-  public void keyTyped(KeyEvent e) {
-    //no code needed here
-  }
+  public void keyTyped(KeyEvent e) {}
 
   public void run() {
     try {
