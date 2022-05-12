@@ -37,7 +37,7 @@ public class OuterSpace extends Canvas implements KeyListener, Runnable {
 
     //instantiate other instance variables
     //Ship, Alien
-    ship = new Ship(400, 500, 50, 50, 10);
+    ship = new Ship(400, 500, 50, 50, 1);
     alienOne = new Alien();
     alienTwo = new Alien();
 
@@ -68,10 +68,18 @@ public class OuterSpace extends Canvas implements KeyListener, Runnable {
     graphToBack.setColor(Color.BLACK);
     graphToBack.fillRect(0, 0, 800, 600);
 
-    if (keys[0] == true) {
-      ship.move("LEFT");
+    if (keys[0] && ship.getX() + ship.getSpeed() > 0) {
+      ship.move("left");
     }
-
+    if (keys[1] && ship.getX() + ship.getSpeed() + ship.getWidth() < 800) {
+      ship.move("right");
+    }
+    if (keys[2] && ship.getY() + ship.getSpeed() > 0) {
+      ship.move("down");
+    }
+    if (keys[3] && ship.getY() + ship.getSpeed() + (ship.getHeight() * 2) < 600) {
+      ship.move("up");
+    }
     //add code to move Ship, Alien, etc.
     ship.draw(graphToBack);
     //add in collision detection to see if Bullets hit the Aliens and if Bullets hit the Ship

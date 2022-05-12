@@ -53,10 +53,10 @@ public class Ship extends MovingThing {
     //add code here
     switch (direction) {
       case "up":
-        setY(getY() - speed);
+        setY(getY() + speed);
         break;
       case "down":
-        setY(getY() + speed);
+        setY(getY() - speed);
         break;
       case "left":
         setX(getX() - speed);
