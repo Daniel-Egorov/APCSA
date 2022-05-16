@@ -18,15 +18,7 @@ import java.util.ArrayList;
 public class OuterSpace extends Canvas implements KeyListener, Runnable {
 
   private Ship ship;
-  private Alien alienOne;
-  private Alien alienTwo;
-  private Ammo shot;
 
-  /* uncomment once you are ready for this part
-	 *
-   private AlienHorde horde;
-	private Bullets shots;
-	*/
   private Bullets shots;
   private AlienHorde horde;
 
@@ -41,8 +33,6 @@ public class OuterSpace extends Canvas implements KeyListener, Runnable {
     //instantiate other instance variables
     //Ship, Alien
     ship = new Ship(400, 500, 50, 50, 1);
-    alienOne = new Alien(350, 20);
-    alienTwo = new Alien(450, 20);
     shots = new Bullets();
     horde = new AlienHorde(34);
 
