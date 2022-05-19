@@ -21,7 +21,7 @@ public class AlienHorde {
     int x = 10;
     int y = 10;
     int xChange = 50;
-    for (int i = 0; i < size; i++) {
+    for (int i = 0; i <= size; i++) {
       if (x >= 820 || x <= -20) {
         y += 40;
         xChange = -xChange;
@@ -66,12 +66,33 @@ public class AlienHorde {
           shot.getY() <= alien.getY() + alien.getHeight() &&
           shot.getY() + shot.getHeight() >= alien.getY()
         ) {
-          score++;
+          score += 5;
           aliens.remove(i);
-          shots.remove(j);
+          shot.setPos(-500, -500);
+          shot.setSpeed(0);
         }
       }
     }
+  }
+
+  public void stopEmAll() {
+    for (Alien a : aliens) {
+      a.setSpeed(0);
+    }
+  }
+
+  public boolean collision(Ship ship) {
+    for (Alien a : aliens) {
+      if (
+        ship.getX() <= a.getX() + a.getWidth() &&
+        ship.getX() + ship.getWidth() >= a.getX() &&
+        ship.getY() <= a.getY() + a.getHeight() &&
+        ship.getY() + ship.getHeight() >= a.getY()
+      ) {
+        return true;
+      }
+    }
+    return false;
   }
 
   public int getScore() {

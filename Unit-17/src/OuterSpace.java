@@ -14,6 +14,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
+import java.awt.Font;
 
 public class OuterSpace extends Canvas implements KeyListener, Runnable {
 
@@ -83,17 +84,40 @@ public class OuterSpace extends Canvas implements KeyListener, Runnable {
     if (keys[4]) {
       shots.add(new Ammo(ship.getX() + (ship.getWidth() / 2), ship.getY() + (ship.getHeight() / 2), 5));
       keys[4] = false;
+      horde.setScore(horde.getScore() - 1);
     }
     //add code to move Ship, Alien, etc.
     shots.drawEmAll(graphToBack);
     shots.moveEmAll();
     horde.drawEmAll(graphToBack);
     horde.moveEmAll();
-    score = alienCount - horde.getList().size();
-    graphToBack.drawString("Score: " + score, 700, 50);
     horde.removeDeadOnes(shots.getList());
+    graphToBack.drawString("Score: " + horde.getScore(), 700, 50);
     ship.draw(graphToBack);
 
+    if (horde.collision(ship)) {
+      horde.stopEmAll();
+      ship.setSpeed(0);
+      graphToBack.setColor(Color.red);
+      graphToBack.fillRect(0, 0, 800, 600);
+      graphToBack.setColor(Color.white);
+      graphToBack.setFont(new Font("Times New Roman", Font.PLAIN, 48));
+      graphToBack.drawString("Game Over", 300, 300);
+      graphToBack.drawString("Score: " + horde.getScore(), 300, 400);
+    }
+
+    // for some reason the -1 has to be there
+    // dont know why.... the size is +1 the inputted size...
+    if (horde.getList().size() - 1 == 0) {
+      horde.stopEmAll();
+      ship.setSpeed(0);
+      graphToBack.setColor(Color.green);
+      graphToBack.fillRect(0, 0, 800, 600);
+      graphToBack.setColor(Color.white);
+      graphToBack.setFont(new Font("Times New Roman", Font.PLAIN, 48));
+      graphToBack.drawString("You Win!", 300, 300);
+      graphToBack.drawString("Score: " + horde.getScore(), 300, 400);
+    }
     twoDGraph.drawImage(back, null, 0, 0);
   }
 
