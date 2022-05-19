@@ -13,9 +13,11 @@ import javax.imageio.ImageIO;
 public class AlienHorde {
 
   private List<Alien> aliens;
+  private int score;
 
   public AlienHorde(int size) {
     aliens = new ArrayList<Alien>();
+    score = 0;
     int x = 10;
     int y = 10;
     int xChange = 50;
@@ -64,11 +66,24 @@ public class AlienHorde {
           shot.getY() <= alien.getY() + alien.getHeight() &&
           shot.getY() + shot.getHeight() >= alien.getY()
         ) {
+          score++;
           aliens.remove(i);
           shots.remove(j);
         }
       }
     }
+  }
+
+  public int getScore() {
+    return score;
+  }
+
+  public void setScore(int n) {
+    score = n;
+  }
+
+  public List<Alien> getList() {
+    return aliens;
   }
 
   public String toString() {
