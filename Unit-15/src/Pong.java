@@ -27,7 +27,7 @@ public class Pong extends Canvas implements KeyListener, Runnable {
   private Wall bottomWall;
   private int playerOneScore;
   private int playerTwoScore;
-  
+
   public Pong() {
     //set up all variables related to the game
     this.ball = new Ball(200, 200, Color.orange);
@@ -70,8 +70,7 @@ public class Pong extends Canvas implements KeyListener, Runnable {
 
     //see if ball hits left wall or right wall
     if (ball.didCollideLeft(this.leftWall) || ball.didCollideRight(this.rightWall)) {
-      if (ball.didCollideLeft(this.leftWall)) playerTwoScore++;
-      else playerOneScore++;
+      if (ball.didCollideLeft(this.leftWall)) playerTwoScore++; else playerOneScore++;
       ball.draw(graphToBack, Color.WHITE);
       ball.setPos(200, 200);
       ball.setXSpeed(-ball.getXSpeed());

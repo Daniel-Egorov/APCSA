@@ -6,6 +6,7 @@ import static java.lang.Character.*;
 
 import java.awt.Canvas;
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.event.ActionEvent;
@@ -14,7 +15,6 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
-import java.awt.Font;
 
 public class OuterSpace extends Canvas implements KeyListener, Runnable {
 
@@ -63,12 +63,12 @@ public class OuterSpace extends Canvas implements KeyListener, Runnable {
     //create a graphics reference to the back ground image
     //we will draw all changes on the background image
     Graphics graphToBack = back.createGraphics();
-    
+
     graphToBack.setColor(Color.BLUE);
     graphToBack.drawString("StarFighter ", 25, 50);
     graphToBack.setColor(Color.BLACK);
     graphToBack.fillRect(0, 0, 800, 600);
-    
+
     if (keys[0] && ship.getX() + ship.getSpeed() > 0) {
       ship.move("left");
     }
