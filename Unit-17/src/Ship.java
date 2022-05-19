@@ -15,24 +15,24 @@ public class Ship extends MovingThing {
   private Image image;
 
   public Ship() {
-    this(10, 10, 10, 10, 10);
+    this(10, 10, 10, 10, 10, "ship.jpg");
   }
 
-  public Ship(int x, int y) {
+  public Ship(int x, int y, String f) {
     //add code here
-    this(x, y, 10, 10, 10);
+    this(x, y, 10, 10, 10, f);
   }
 
-  public Ship(int x, int y, int s) {
+  public Ship(int x, int y, int s, String f) {
     //add code here
-    this(x, y, 10, 10, s);
+    this(x, y, 10, 10, s, f);
   }
 
-  public Ship(int x, int y, int w, int h, int s) {
+  public Ship(int x, int y, int w, int h, int s, String f) {
     super(x, y, w, h);
     speed = s;
     try {
-      URL url = getClass().getResource("ship.jpg");
+      URL url = getClass().getResource(f);
       image = ImageIO.read(url);
     } catch (Exception e) {
       //feel free to do something here

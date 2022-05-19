@@ -28,16 +28,21 @@ public class OuterSpace extends Canvas implements KeyListener, Runnable {
 
   private int score;
   private int alienCount;
+  private int lives;
+
+  private Ship powerUp;
 
   public OuterSpace() {
     setBackground(Color.black);
 
     keys = new boolean[5];
     score = 0;
+    lives = 1;
 
     //instantiate other instance variables
     //Ship, Alien
-    ship = new Ship(400, 500, 50, 50, 1);
+    ship = new Ship(400, 500, 50, 50, 1, "ship.jpg");
+    powerUp = new Ship((int) (Math.random() * 600 + 50), (int) (Math.random() * 400 + 50), 50, 50, 0, "pu.jpg");
     shots = new Bullets();
     horde = new AlienHorde(34);
     alienCount = horde.getList().size();
@@ -69,6 +74,43 @@ public class OuterSpace extends Canvas implements KeyListener, Runnable {
     graphToBack.setColor(Color.BLACK);
     graphToBack.fillRect(0, 0, 800, 600);
 
+    powerUp.draw(graphToBack);
+    shots.drawEmAll(graphToBack);
+    shots.moveEmAll();
+    horde.drawEmAll(graphToBack);
+    horde.moveEmAll();
+    horde.removeDeadOnes(shots.getList());
+    graphToBack.drawString("Score: " + horde.getScore(), 700, 50);
+    ship.draw(graphToBack);
+
+    // for some reason the -1 has to be there
+    // dont know why.... the size is +1 the inputted size...
+    if (horde.getList().size() - 1 == 0) {
+      ship.setSpeed(0);
+      graphToBack.setColor(Color.green);
+      graphToBack.fillRect(0, 0, 800, 600);
+      graphToBack.setColor(Color.white);
+      graphToBack.setFont(new Font("Times New Roman", Font.PLAIN, 48));
+      graphToBack.drawString("You Win!", 300, 300);
+      graphToBack.drawString("Score: " + horde.getScore(), 300, 400);
+
+      // prevent shots from being fired to affect the score post game
+      keys[4] = false;
+    }
+
+    if (lives == 0) {
+      horde.removeEmAll();
+      ship.setSpeed(0);
+      graphToBack.setColor(Color.red);
+      graphToBack.fillRect(0, 0, 800, 600);
+      graphToBack.setColor(Color.white);
+      graphToBack.setFont(new Font("Times New Roman", Font.PLAIN, 48));
+      graphToBack.drawString("Game Over", 300, 300);
+      graphToBack.drawString("Score: " + horde.getScore(), 300, 400);
+      // prevent shots from being fired to affect the score post game
+      keys[4] = false;
+    }
+
     if (keys[0] && ship.getX() + ship.getSpeed() > 0) {
       ship.move("left");
     }
@@ -86,38 +128,27 @@ public class OuterSpace extends Canvas implements KeyListener, Runnable {
       keys[4] = false;
       horde.setScore(horde.getScore() - 1);
     }
-    //add code to move Ship, Alien, etc.
-    shots.drawEmAll(graphToBack);
-    shots.moveEmAll();
-    horde.drawEmAll(graphToBack);
-    horde.moveEmAll();
-    horde.removeDeadOnes(shots.getList());
-    graphToBack.drawString("Score: " + horde.getScore(), 700, 50);
-    ship.draw(graphToBack);
+
+    // check if the ship collides with powerUp
+    if (
+      ship.getX() + ship.getWidth() > powerUp.getX() &&
+      ship.getX() < powerUp.getX() + powerUp.getWidth() &&
+      ship.getY() + ship.getHeight() > powerUp.getY() &&
+      ship.getY() < powerUp.getY() + powerUp.getHeight()
+    ) {
+      powerUp.setX((int) (Math.random() * 600 + 50));
+      powerUp.setY((int) (Math.random() * 400 + 50));
+      ship = new Ship(ship.getX(), ship.getY(), 50, 50, ship.getSpeed(), "ship.jpgWithShield.jpg");
+      lives = 2;
+    }
 
     if (horde.collision(ship)) {
-      horde.stopEmAll();
-      ship.setSpeed(0);
-      graphToBack.setColor(Color.red);
-      graphToBack.fillRect(0, 0, 800, 600);
-      graphToBack.setColor(Color.white);
-      graphToBack.setFont(new Font("Times New Roman", Font.PLAIN, 48));
-      graphToBack.drawString("Game Over", 300, 300);
-      graphToBack.drawString("Score: " + horde.getScore(), 300, 400);
+      lives--;
+      ship = new Ship(ship.getX(), ship.getY(), 50, 50, ship.getSpeed(), "ship.jpg");
+      ship.setPos(400, 500);
     }
 
-    // for some reason the -1 has to be there
-    // dont know why.... the size is +1 the inputted size...
-    if (horde.getList().size() - 1 == 0) {
-      horde.stopEmAll();
-      ship.setSpeed(0);
-      graphToBack.setColor(Color.green);
-      graphToBack.fillRect(0, 0, 800, 600);
-      graphToBack.setColor(Color.white);
-      graphToBack.setFont(new Font("Times New Roman", Font.PLAIN, 48));
-      graphToBack.drawString("You Win!", 300, 300);
-      graphToBack.drawString("Score: " + horde.getScore(), 300, 400);
-    }
+
     twoDGraph.drawImage(back, null, 0, 0);
   }
 

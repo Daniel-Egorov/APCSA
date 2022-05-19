@@ -7,6 +7,7 @@ import java.awt.Graphics;
 import java.awt.Image;
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import javax.imageio.ImageIO;
 
@@ -56,18 +57,20 @@ public class AlienHorde {
   }
 
   public void removeDeadOnes(List<Ammo> shots) {
-    for (int i = 0; i < aliens.size(); i++) {
+    Iterator<Alien> it = aliens.iterator();
+    while (it.hasNext()) {
+      Alien a = it.next();
       for (int j = 0; j < shots.size(); j++) {
         Ammo shot = shots.get(j);
-        Alien alien = aliens.get(i);
         if (
-          shot.getX() <= alien.getX() + alien.getWidth() &&
-          shot.getX() + shot.getWidth() >= alien.getX() &&
-          shot.getY() <= alien.getY() + alien.getHeight() &&
-          shot.getY() + shot.getHeight() >= alien.getY()
+          shot.getX() <= a.getX() + a.getWidth() &&
+          shot.getX() + shot.getWidth() >= a.getX() &&
+          shot.getY() <= a.getY() + a.getHeight() &&
+          shot.getY() + shot.getHeight() >= a.getY()
         ) {
           score += 5;
-          aliens.remove(i);
+          // aliens.remove(aliens.indexOf(a));
+          it.remove();
           shot.setPos(-500, -500);
           shot.setSpeed(0);
         }
@@ -75,10 +78,8 @@ public class AlienHorde {
     }
   }
 
-  public void stopEmAll() {
-    for (Alien a : aliens) {
-      a.setSpeed(0);
-    }
+  public void removeEmAll() {
+    aliens.clear();
   }
 
   public boolean collision(Ship ship) {
