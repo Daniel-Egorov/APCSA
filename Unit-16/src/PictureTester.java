@@ -119,8 +119,6 @@ public class PictureTester {
     beach.explore();
   }
 
-  public static void testEncodeAndDecode() {}
-
   public static void testGetCountRedOverValue(int value) {}
 
   public static void testSetRedToHalfValue(int value) {}
@@ -167,6 +165,25 @@ public class PictureTester {
     canvas.explore();
   }
 
+  public static void testEncodeAndDecode() {
+    Picture beach = new Picture(pathPrefix + "beach.jpg");
+    Picture appleLogo = new Picture(pathPrefix + "apple_icon.jpg");
+    // beach.explore();
+
+    // beach.encode(appleLogo);
+    // beach.explore();
+    // beach.decode();
+    // beach.explore();
+
+    Picture message = new Picture(pathPrefix + "msg.jpg");
+    message.explore();
+    appleLogo.explore();
+    appleLogo.encode(message);
+    appleLogo.explore();
+    appleLogo.decode();
+    appleLogo.explore();
+  }
+
   /** Main method for testing.  Every class can have a main
    * method in Java */
   public static void main(String[] args) {
@@ -199,5 +216,6 @@ public class PictureTester {
     // testSetRedToHalfValueInTopHalf();
     // testClearBlueOverValue(0);
     // testGetAverageForColumn(0);
+    testEncodeAndDecode();
   }
 }

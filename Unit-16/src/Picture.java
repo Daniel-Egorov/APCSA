@@ -440,6 +440,95 @@ public class Picture extends SimplePicture {
     }
   }
 
+  public void encode(Picture messagePicture) {
+    Pixel[][] pixels = this.getPixels2D();
+    Pixel[][] messagePixels = messagePicture.getPixels2D();
+    int currentMod = 2;
+    for (int i = 0; i < pixels.length && i < messagePixels.length; i++) {
+      for (int j = 0; j < pixels[i].length && j < messagePixels[i].length; j++) {
+        Pixel pixel = pixels[i][j];
+        Pixel messagePixel = messagePixels[i][j];
+        if (messagePixel.colorDistance(Color.black) < 50) {
+          // System.out.println("if");
+          while (pixel.getRed() % currentMod != 0) {
+            if (currentMod == 2 && pixel.getRed() == 255) {
+              pixel.setRed(254);
+            } else {
+              pixel.setRed(pixel.getRed() + 1);
+            }
+          }
+          while (pixel.getGreen() % currentMod != 0) {
+            if (currentMod == 2 && pixel.getGreen() == 255) {
+              pixel.setGreen(254);
+            } else {
+              pixel.setGreen(pixel.getGreen() + 1);
+            }
+          }
+          while (pixel.getBlue() % currentMod != 0) {
+            if (currentMod == 2 && pixel.getBlue() == 255) {
+              pixel.setBlue(254);
+            } else {
+              pixel.setBlue(pixel.getBlue() + 1);
+            }
+          }
+        } else {
+          // System.out.println("else");
+          while (pixel.getRed() % currentMod == 0) {
+            if (currentMod == 3 && pixel.getRed() == 255) {
+              pixel.setRed(253);
+            } else {
+              pixel.setRed(pixel.getRed() + 1);
+            }
+          }
+          while (pixel.getGreen() % currentMod == 0) {
+            if (currentMod == 3 && pixel.getGreen() == 255) {
+              pixel.setGreen(253);
+            } else {
+              pixel.setGreen(pixel.getGreen() + 1);
+            }
+          }
+          while (pixel.getBlue() % currentMod == 0) {
+            if (currentMod == 3 && pixel.getBlue() == 255) {
+              pixel.setBlue(253);
+            } else {
+              pixel.setBlue(pixel.getBlue() + 1);
+            }
+          }
+        }
+        // System.out.println("done: " + i + " " + j);
+        // System.out.println(currentMod);
+        if (currentMod % 2 == 0) {
+          currentMod++;
+        } else {
+          currentMod--;
+        }
+      }
+    }
+  }
+
+  public void decode() {
+    Pixel[][] pixels = this.getPixels2D();
+    int currentMod = 2;
+    for (Pixel[] row : pixels) {
+      for (Pixel pixel : row) {
+        if (
+          pixel.getRed() % currentMod == 0 &&
+          pixel.getBlue() % currentMod == 0 &&
+          pixel.getGreen() % currentMod == 0
+        ) {
+          pixel.setColor(new Color(0, 0, 0, 0));
+        } else {
+          pixel.setColor(new Color(255, 255, 255, 0));
+        }
+        if (currentMod % 2 == 0) {
+          currentMod++;
+        } else {
+          currentMod--;
+        }
+      }
+    }
+  }
+
   /* Main method for testing - each class in Java can have a main
    * method
    */
